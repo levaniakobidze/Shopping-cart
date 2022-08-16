@@ -1,0 +1,33 @@
+.productListing {
+  margin-top: 75px;
+  display: flex;
+  background-color: var(--main-grey);
+}
+
+.productListing_card {
+  display: flex;
+  width: 81rem;
+
+  justify-content: space-between;
+}
+
+.list_wrapper {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 10px;
+}
+
+@media screen and (max-width: 787px) {
+  .productListing_card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 741px) {
+  .list_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}

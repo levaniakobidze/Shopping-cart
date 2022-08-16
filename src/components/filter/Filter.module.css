@@ -1,0 +1,14 @@
+.filter {
+  flex: 0.3;
+  background-color: var(--main-white);
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 787px) {
+  .filter {
+    width: 100%;
+    min-height: 60px !important;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+}
