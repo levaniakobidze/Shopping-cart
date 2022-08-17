@@ -10,7 +10,7 @@ import Card from "../../components/Card/Card";
 
 function ProductsList() {
   const dispatch = useDispatch();
-  const lstItems = useSelector((state) => state.cart.listItems);
+  const items = useSelector((state) => state.cart.listItems);
   const cartItems = useSelector((state) => state.cart.cartItems);
 
   useEffect(() => {
@@ -22,8 +22,8 @@ function ProductsList() {
       <Card className={classes.productListing_card}>
         <Filter />
         <div className={classes.list_wrapper}>
-          {listItems &&
-            listItems.map((item) => {
+          {items &&
+            items.map((item) => {
               return <Product key={item.id} {...item} />;
             })}
         </div>

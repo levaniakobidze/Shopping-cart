@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
+  initialItems: [],
   listItems: [],
   cartItems: [],
   amount: 0,
@@ -13,6 +14,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItemsList: (state, { payload }) => {
+      state.initialItems = payload;
       state.listItems = payload;
     },
     addItemToCart: (state, { payload }) => {
@@ -51,6 +53,12 @@ const cartSlice = createSlice({
       state.amount = amount;
       state.total = total;
     },
+    filterWithSearch: (state, { payload }) => {
+      const filtered = state.initialItems.filter((item) =>
+        item.title.toLowerCase().includes(payload)
+      );
+      state.listItems = filtered;
+    },
   },
 });
 
@@ -61,6 +69,7 @@ export const {
   increaseAmount,
   decreaseAmount,
   calculate,
+  filterWithSearch,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

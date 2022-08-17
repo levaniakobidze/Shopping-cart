@@ -38,17 +38,20 @@
   border-bottom: 1px solid rgb(219, 219, 219);
 }
 .add_btn {
-  width: 130px;
+  width: 40px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 50%;
   border: 0;
   outline: 0;
   background-color: var(--main-purple);
   color: var(--main-white);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
-  margin: 16px;
+  margin: 15px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 741px) {

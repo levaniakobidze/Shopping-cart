@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./Product.module.css";
 import { addItemToCart } from "../../redux/slices/cartSlice";
 import { useDispatch } from "react-redux";
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 
 function Product({ id, amount, img, title, price }) {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ function Product({ id, amount, img, title, price }) {
         <button
           className={classes.add_btn}
           onClick={() => addToCartHandler(id)}>
-          ADD TO CART
+          <LocalMallOutlinedIcon />
         </button>
       </div>
     </section>
