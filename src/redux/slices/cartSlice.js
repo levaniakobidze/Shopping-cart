@@ -55,9 +55,30 @@ const cartSlice = createSlice({
     },
     filterWithSearch: (state, { payload }) => {
       const filtered = state.initialItems.filter((item) =>
-        item.title.toLowerCase().includes(payload)
+        item.title.toLowerCase().includes(payload.toLowerCase())
       );
       state.listItems = filtered;
+    },
+    filterBrands: (state, { payload }) => {
+      if (payload === "All") {
+        state.listItems = state.initialItems;
+        return;
+      }
+      const filtered = state.initialItems.filter((item) =>
+        item.title.toLowerCase().includes(payload.toLowerCase())
+      );
+      state.listItems = filtered;
+    },
+    filterPrice: (state, { payload }) => {
+      /////////////////////////////////
+      const filteredPrice = state.listItems.filter(
+        (item) => item.price > payload.from && item.price < payload.to
+      );
+      state.listItems = filteredPrice;
+      //////////////////////////////////
+    },
+    restart: (state) => {
+      state.listItems = state.initialItems;
     },
   },
 });
@@ -70,6 +91,9 @@ export const {
   decreaseAmount,
   calculate,
   filterWithSearch,
+  filterBrands,
+  filterPrice,
+  restart,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

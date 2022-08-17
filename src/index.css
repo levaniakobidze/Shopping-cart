@@ -2,6 +2,7 @@
   --main-white: rgb(255, 255, 255);
   --main-grey: rgb(238, 238, 238);
   --main-purple: rgb(126, 3, 163);
+  --main-black: #000;
 }
 
 * {

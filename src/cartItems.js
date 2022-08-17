@@ -8,7 +8,7 @@ const listItems = [
   },
   {
     id: "recB6qcHPxb62YJ75",
-    title: "google pixel",
+    title: "Apple",
     price: "499.99",
     img: "https://dl.airtable.com/.attachments/91c88ae8c1580e2b762ecb3f73ed1eed/a633139a/phone-1_gvesln.png",
     amount: 1,

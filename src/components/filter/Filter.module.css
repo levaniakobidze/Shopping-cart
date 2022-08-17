@@ -64,7 +64,102 @@
   font-size: 14px;
   letter-spacing: 2px;
 }
+.filter_brands {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 40px;
+}
+.filter_brands_title {
+  color: var(--main-black);
+}
+.brands_list {
+  width: 100%;
+  margin: 10px 0;
+}
 
+.brands_list li {
+  list-style: none;
+  width: 90%;
+  margin: 0px 0px;
+  color: var(--main-purple);
+  cursor: pointer;
+  padding: 12px 0;
+  transition: all 0.3s;
+}
+.brands_list li:hover {
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+.filter_price {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 40px;
+}
+.filter_price_title {
+  color: var(--main-black);
+  margin-bottom: 10px;
+}
+.price_filter_inputs {
+  display: flex;
+}
+.price_from,
+.price_to {
+  /* margin-top: 10px; */
+  width: 60px;
+  height: 30px;
+  margin-right: 5px;
+  padding-left: 10px;
+  border: 0;
+  background-color: var(--main-white);
+  outline: 0;
+  transition: all 0.6s;
+  color: var(--main-purple);
+  border: 1px solid var(--main-purple);
+}
+.price_from_hide,
+.price_to_hide {
+  width: 0px;
+  height: 30px;
+}
+
+.price_from::placeholder,
+.price_to::placeholder {
+  color: var(--main-purple);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.ok_btn {
+  outline: 0;
+  border: 0;
+  background-color: var(--main-purple);
+  color: var(--main-white);
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+.restart_btn {
+  outline: 0;
+  border: 1px solid var(--main-purple);
+  background-color: var(--main-purple);
+  width: 40px !important;
+  height: 30px !important;
+  margin: 0 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restart_icon {
+  /* font-size: 18px; */
+  width: 20px;
+  background-color: var(--main-purple);
+  color: var(--main-white);
+}
+
+/* //////////////////////////////// */
 @media screen and (max-width: 787px) {
   .filter {
     width: 100%;

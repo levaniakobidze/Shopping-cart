@@ -3,6 +3,7 @@
   height: 340px;
   background-color: var(--main-white);
   transition: all 0.5s;
+  animation: slideCard 1s forwards ease-in-out;
 }
 
 .product_img {
@@ -91,5 +92,19 @@
     width: 350px;
     height: 345px;
     background-color: var(--main-white);
+  }
+}
+
+/* /////////////////////  ANIMATIONS //////////////////// */
+
+@keyframes slideCard {
+  0% {
+    opacity: 0;
+    margin-left: 5rem;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: 0rem;
   }
 }
