@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Product.module.css";
 import { addItemToCart } from "../../redux/slices/cartSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
+import { closeModal, openModal } from "../../redux/slices/cartModalSlice";
 
 function Product({ id, amount, img, title, price }) {
+  const timeout = useSelector((state) => state.modal.timeout);
   const dispatch = useDispatch();
   const addToCartHandler = (id) => {
     dispatch(addItemToCart(id));
+    dispatch(openModal());
+    setTimeout(() => {
+      if (timeout) {
+        console.log(timeout);
+        dispatch(closeModal());
+      }
+    }, 1000);
   };
 
   return (

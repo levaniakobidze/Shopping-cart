@@ -1,0 +1,119 @@
+.cart_modal {
+  background-color: var(--main-white);
+  width: 300px;
+  height: 340px;
+  position: fixed;
+  top: 13.5%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 6px 1px rgb(214, 214, 214);
+}
+.wrapper {
+  overflow-y: scroll;
+  min-height: 200px;
+}
+.empty {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(127, 127, 127);
+}
+.remove {
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: rgb(74, 74, 74);
+  font-size: 13px;
+}
+.remove:hover {
+  color: var(--main-purple);
+}
+.cart_modal_item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.cart_modal_item_img {
+  width: 50px;
+  height: 50px;
+}
+.cart_modal_item_img img {
+  width: 100%;
+}
+.title {
+  letter-spacing: 2px;
+  font-size: 10px;
+  color: rgb(84, 84, 84);
+  margin: 1px;
+}
+.amount_btns_cont {
+  margin-top: 7px;
+}
+.increase,
+.decrease {
+  border: 0;
+  outline: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 20px;
+  color: var(--main-purple);
+  border-bottom: 1px solid rgb(225, 225, 225);
+  font-weight: bold;
+  background-color: var(--main-white);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.amount {
+  margin: 0 3px;
+}
+.price {
+  flex: 1;
+  height: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 30px;
+}
+.total {
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sub_total {
+  color: rgb(107, 107, 107);
+}
+.open_cart_btn_cont {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.open_cart_btn {
+  text-decoration: none;
+  outline: none;
+  width: 100%;
+  height: 50px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-purple);
+  color: var(--main-white);
+  font-size: 17px;
+  font-weight: bold;
+}

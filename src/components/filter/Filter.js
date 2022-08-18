@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import classes from "./Filter.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
@@ -11,16 +11,17 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import ReplayIcon from "@mui/icons-material/Replay";
 
-function Filter() {
+function Filter(props) {
   const [active, setActive] = useState(true);
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.cart);
+  const items = useSelector((state) => state.cart.initialItems);
   const priceFromRef = useRef(null);
   const priceToRef = useRef(null);
+  // const [brands, setBrands] = useState([]);
+  let brands = [];
 
   const handleInputChange = (e) => {
     dispatch(filterWithSearch(e.target.value));
-    console.log(state);
   };
 
   const searchBrandsHandler = (e) => {
@@ -41,6 +42,14 @@ function Filter() {
     priceToRef.current.value = "";
     dispatch(restart());
   };
+
+  if (items.length > 0) {
+    items.map((item) => {
+      if (!brands.includes(item.brand)) {
+        brands = [...brands, item.brand];
+      }
+    });
+  }
 
   return (
     <section
@@ -74,10 +83,10 @@ function Filter() {
           <h4 className={classes.filter_brands_title}>Brands</h4>
           <ul className={classes.brands_list} onClick={searchBrandsHandler}>
             <li>All</li>
-            <li>Samsung</li>
-            <li>Apple</li>
-            <li>Google</li>
-            <li>Xiaomi</li>
+            {brands &&
+              brands.map((name, i) => {
+                return <li key={i}>{name}</li>;
+              })}
           </ul>
         </div>
         <div className={classes.filter_price}>

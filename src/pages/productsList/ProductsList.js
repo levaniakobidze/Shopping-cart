@@ -1,26 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import classes from "./ProductsList.module.css";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemsList, calculate } from "../../redux/slices/cartSlice";
-import listItems from "../../cartItems";
 import Product from "../../components/product/Product";
 import Filter from "../../components/filter/Filter";
 import Card from "../../components/Card/Card";
+import { addItemsList } from "../../redux/slices/cartSlice";
+import { phonesList } from "../../cartItems";
 
 function ProductsList() {
-  const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.listItems);
-  const cartItems = useSelector((state) => state.cart.cartItems);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(addItemsList(listItems));
+    dispatch(addItemsList(phonesList));
   }, []);
 
   return (
     <section className={classes.productListing}>
       <Card className={classes.productListing_card}>
-        <Filter />
+        <Filter
+          item1={"Samsung"}
+          item2={"Apple"}
+          item3={"Google"}
+          item4={"Xiaomi"}
+        />
         <div className={classes.list_wrapper}>
           {items &&
             items.map((item) => {

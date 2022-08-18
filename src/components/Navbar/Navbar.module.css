@@ -52,3 +52,15 @@
   color: var(--main-white);
   font-weight: bold;
 }
+.navbar_menu {
+  display: flex;
+  align-items: center;
+}
+.navbar_menu li {
+  list-style: none;
+}
+
+.navbar_menu li a {
+  text-decoration: none;
+  margin: 0 10px;
+}
