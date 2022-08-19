@@ -18,12 +18,7 @@ function ProductsList() {
   return (
     <section className={classes.productListing}>
       <Card className={classes.productListing_card}>
-        <Filter
-          item1={"Samsung"}
-          item2={"Apple"}
-          item3={"Google"}
-          item4={"Xiaomi"}
-        />
+        <Filter />
         <div className={classes.list_wrapper}>
           {items &&
             items.map((item) => {

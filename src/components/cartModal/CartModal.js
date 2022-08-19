@@ -38,6 +38,10 @@ function CartModal() {
     }, 1000);
   };
 
+  const closeCartModal = () => {
+    dispatch(closeModal());
+  };
+
   return (
     <div
       className={classes.cart_modal}
@@ -84,7 +88,10 @@ function CartModal() {
         <span className={classes.sub_total}>sub-total: </span>${total}
       </span>
       <div className={classes.open_cart_btn_cont}>
-        <Link to={"/cart"} className={classes.open_cart_btn}>
+        <Link
+          to={"/cart"}
+          className={classes.open_cart_btn}
+          onClick={closeCartModal}>
           {" "}
           Go to cart
         </Link>

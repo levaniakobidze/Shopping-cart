@@ -11,7 +11,7 @@
 .navbar_card {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  /* padding: 20px 0; */
 }
 .logo {
   display: flex;
@@ -25,6 +25,10 @@
   background-color: var(--main-purple);
   border-radius: 50% 0% 50% 0;
   margin-right: 10px;
+}
+.navbar_and_cart_wrapper {
+  display: flex;
+  align-items: center;
 }
 .cart {
   padding: 0px 5px;
@@ -55,12 +59,52 @@
 .navbar_menu {
   display: flex;
   align-items: center;
+  margin-right: 70px;
 }
 .navbar_menu li {
   list-style: none;
 }
 
-.navbar_menu li a {
+.navbar_menu_link {
   text-decoration: none;
   margin: 0 10px;
+  padding: 20px 0;
+  color: var(--main-purple);
+}
+
+.navigation {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 30px 0;
+  color: var(--main-purple);
+}
+.navigation:hover .navigation_dropdown_menu {
+  display: flex;
+}
+.navigation_dropdown_menu {
+  display: none;
+  min-height: 200px;
+  position: absolute;
+  background-color: var(--main-purple);
+  min-width: 190px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  z-index: 1;
+  top: 100%;
+  flex-direction: column;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropdown_menu_link {
+  text-decoration: none;
+  color: #fff;
+  width: 100% !important;
+  transition: all 0.3s;
+  padding: 10px 10px;
+}
+
+.dropdown_menu_link:hover {
+  background-color: var(--main-purple-light);
+  color: var(--main-white);
 }

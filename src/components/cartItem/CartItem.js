@@ -7,7 +7,7 @@ import {
   decreaseAmount,
 } from "../../redux/slices/cartSlice";
 
-function CartItem({ img, id, title, description, amount }) {
+function CartItem({ img, id, title, price, amount }) {
   const dispatch = useDispatch();
   const removeFromCart = (id) => {
     dispatch(removeItemFromCart(id));
@@ -21,18 +21,25 @@ function CartItem({ img, id, title, description, amount }) {
   };
 
   return (
-    <section>
-      <h1>{title}</h1>
-      <img src={img} alt={title} />
-      <p>{description}</p>
-
-      <div>
-        <button onClick={() => decrease(id)}>-</button>
-        <span>{amount}</span>
-        <button onClick={() => increase(id)}>+</button>
+    <section className={classes.cart_item}>
+      <div className={classes.cart_item_img}>
+        <img src={img} alt={title} />
       </div>
+      <h1 className={classes.cart_item_title}>{title}</h1>
+      <div className={classes.btns_cont}>
+        <button className={classes.decrease} onClick={() => decrease(id)}>
+          {"<"}
+        </button>
+        <span>{amount}</span>
+        <button className={classes.increase} onClick={() => increase(id)}>
+          {">"}
+        </button>
+      </div>
+      <p className={classes.price}>${price}</p>
 
-      <button onClick={() => removeFromCart(id)}>REMOVE</button>
+      <button className={classes.remove_btn} onClick={() => removeFromCart(id)}>
+        REMOVE
+      </button>
     </section>
   );
 }

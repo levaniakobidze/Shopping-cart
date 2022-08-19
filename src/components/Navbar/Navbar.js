@@ -39,27 +39,56 @@ function Navbar() {
           <span className={classes.logo_item}></span>
           SomeOOn
         </Link>
-        <ul className={classes.navbar_menu}>
-          <li>
-            <Link to='/'>Home</Link>
-          </li>
-          <li>
-            <Link to={"/list"} onClick={addItemsListHandler}>
-              Phones
-            </Link>
-          </li>
-          <li>
-            <Link to={"/list"} onClick={addItemsListHandler}>
-              TV
-            </Link>
-          </li>
-        </ul>
-        <div className={classes.cart} onClick={openCartModalHandler}>
-          <LocalMallOutlinedIcon className={classes.cart_logo} />
-          <span className={classes.amount}>{amount}</span>
-        </div>
+        <div className={classes.navbar_and_cart_wrapper}>
+          <ul className={classes.navbar_menu}>
+            <li>
+              <Link to='/' className={classes.navbar_menu_link}>
+                Home
+              </Link>
+            </li>
+            <li className={classes.navigation}>
+              Navigation
+              <div className={classes.navigation_dropdown_menu}>
+                <Link
+                  to={"/list"}
+                  onClick={addItemsListHandler}
+                  className={classes.dropdown_menu_link}>
+                  Phones
+                </Link>
+                <Link
+                  to={"/list"}
+                  onClick={addItemsListHandler}
+                  className={classes.dropdown_menu_link}>
+                  TV
+                </Link>
+                <Link
+                  to={"/list"}
+                  onClick={addItemsListHandler}
+                  className={classes.dropdown_menu_link}>
+                  Computers
+                </Link>
+                <Link
+                  to={"/list"}
+                  onClick={addItemsListHandler}
+                  className={classes.dropdown_menu_link}>
+                  Headphones
+                </Link>
+                <Link
+                  to={"/list"}
+                  onClick={addItemsListHandler}
+                  className={classes.dropdown_menu_link}>
+                  Bluetooth dynamics
+                </Link>
+              </div>
+            </li>
+          </ul>
+          <div className={classes.cart} onClick={openCartModalHandler}>
+            <LocalMallOutlinedIcon className={classes.cart_logo} />
+            <span className={classes.amount}>{amount}</span>
+          </div>
 
-        {isModalOpen && <CartModal />}
+          {isModalOpen && <CartModal />}
+        </div>
       </Card>
     </nav>
   );
