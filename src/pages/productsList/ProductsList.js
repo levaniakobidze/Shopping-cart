@@ -12,7 +12,9 @@ function ProductsList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(addItemsList(phonesList));
+    if (items.length < 1) {
+      dispatch(addItemsList(phonesList));
+    }
   }, []);
 
   return (

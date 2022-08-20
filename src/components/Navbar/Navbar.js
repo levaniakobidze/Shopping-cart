@@ -4,7 +4,7 @@ import classes from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
-import { phonesList, tvList } from "../../cartItems";
+import { phonesList, tvList, laptopsList } from "../../cartItems";
 import { addItemsList } from "../../redux/slices/cartSlice";
 import {
   openModal,
@@ -26,6 +26,9 @@ function Navbar() {
     if (e.target.innerText.toLowerCase() === "tv") {
       dispatch(addItemsList(tvList));
     }
+    if (e.target.innerText.toLowerCase() === "laptops") {
+      dispatch(addItemsList(laptopsList));
+    }
   };
 
   const openCartModalHandler = () => {
@@ -36,8 +39,7 @@ function Navbar() {
     <nav className={classes.navbar}>
       <Card className={classes.navbar_card}>
         <Link to='/' className={classes.logo}>
-          <span className={classes.logo_item}></span>
-          SomeOOn
+          <span className={classes.logo_item}>Tech-Shop</span>
         </Link>
         <div className={classes.navbar_and_cart_wrapper}>
           <ul className={classes.navbar_menu}>
@@ -65,7 +67,7 @@ function Navbar() {
                   to={"/list"}
                   onClick={addItemsListHandler}
                   className={classes.dropdown_menu_link}>
-                  Computers
+                  Laptops
                 </Link>
                 <Link
                   to={"/list"}

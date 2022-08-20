@@ -64,7 +64,9 @@ function CartModal() {
                   <img src={item.img} alt={item.title} />
                 </div>
                 <div className={classes.title_and_amount_btns}>
-                  <h4 className={classes.title}>{item.title}</h4>
+                  <h4 className={classes.title}>
+                    {item.title.substr(0, 15)}...
+                  </h4>
                   <div className={classes.amount_btns_cont}>
                     <button
                       className={classes.decrease}

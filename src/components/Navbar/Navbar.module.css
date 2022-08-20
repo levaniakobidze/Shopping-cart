@@ -10,21 +10,35 @@
 
 .navbar_card {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  /* padding: 20px 0; */
+  position: relative;
 }
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: var(--main-purple);
+  width: 140px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: var(--main-purple);
+  display: flex;
+  align-items: center;
+  justify-content: right;
 }
 .logo_item {
-  width: 40px;
-  height: 40px;
-  background-color: var(--main-purple);
-  border-radius: 50% 0% 50% 0;
-  margin-right: 10px;
+  width: 90px;
+  height: 39px;
+  margin-right: 1px;
+  background-color: var(--main-white);
+  border-radius: 20px;
+  color: var(--main-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
 }
 .navbar_and_cart_wrapper {
   display: flex;
@@ -51,7 +65,7 @@
   padding: 1px 4px;
   background-color: var(--main-purple);
   border-radius: 50%;
-  top: 2%;
+  top: 1%;
   right: 0%;
   color: var(--main-white);
   font-weight: bold;
@@ -67,9 +81,11 @@
 
 .navbar_menu_link {
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 20px;
   padding: 20px 0;
   color: var(--main-purple);
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .navigation {
@@ -78,6 +94,8 @@
   cursor: pointer;
   padding: 30px 0;
   color: var(--main-purple);
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 .navigation:hover .navigation_dropdown_menu {
   display: flex;

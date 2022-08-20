@@ -26,9 +26,11 @@ function Cart() {
                 return <CartItem key={item.id} {...item} />;
               })}
           </div>
-          <button className={classes.clear_cart} onClick={clearCartHandler}>
-            Clear cart
-          </button>
+          {cartItems.length > 1 && (
+            <button className={classes.clear_cart} onClick={clearCartHandler}>
+              Clear cart
+            </button>
+          )}
         </div>
         <div className={classes.total_wrapper}>
           <div className={classes.total_cont}>

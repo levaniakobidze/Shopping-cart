@@ -1,24 +1,23 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import classes from "./Filter.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
 import {
   filterWithSearch,
   filterBrands,
   filterPrice,
   restart,
+  toggleFilter,
 } from "../../redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ReplayIcon from "@mui/icons-material/Replay";
 
 function Filter(props) {
-  const [active, setActive] = useState(true);
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.initialItems);
+  const active = useSelector((state) => state.cart.filterActive);
+  let brands = [];
   const priceFromRef = useRef(null);
   const priceToRef = useRef(null);
-  // const [brands, setBrands] = useState([]);
-  let brands = [];
 
   const handleInputChange = (e) => {
     dispatch(filterWithSearch(e.target.value));
@@ -60,7 +59,7 @@ function Filter(props) {
         <div className={classes.burger_icon_cont}>
           <MenuIcon
             className={classes.burger_icon}
-            onClick={() => setActive(!active)}
+            onClick={() => dispatch(toggleFilter())}
           />
         </div>
         <h4 className={classes.title}>{""}</h4>

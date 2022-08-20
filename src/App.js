@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductsList from "./pages/productsList/ProductsList";
 import Cart from "./pages/cart/Cart";
 import Navbar from "./components/Navbar/Navbar";
+import ProductDetails from "./pages/productDetails/ProductDetails";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { calculate } from "./redux/slices/cartSlice";
@@ -29,6 +30,7 @@ function App() {
           <Route path={"/"} element={<Home />} />
           <Route path={"/list"} element={<ProductsList />} />
           <Route path={"/cart"} element={<Cart />} />
+          <Route path={"/details/:Id"} element={<ProductDetails />} />
         </Routes>
       </Router>
     </div>
