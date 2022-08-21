@@ -5,6 +5,13 @@
   height: 300px;
   animation: slideCard 1s forwards;
   transition: all 0.3s;
+  border-radius: 5px;
+}
+.product_wrapper:hover .product_title {
+  text-decoration: underline;
+  text-decoration-color: var(--main-purple);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
 }
 .active {
   width: 196px !important;
@@ -126,11 +133,11 @@
 @keyframes slideCard {
   0% {
     opacity: 0;
-    margin-left: 5rem;
+    margin-top: 1rem;
   }
 
   100% {
     opacity: 1;
-    margin-left: 0rem;
+    margin-top: 0rem;
   }
 }

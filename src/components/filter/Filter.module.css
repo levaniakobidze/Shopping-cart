@@ -3,6 +3,7 @@
   background-color: var(--main-white);
   margin-top: 20px;
   transition: all 0.3s;
+  border-radius: 5px;
 }
 .filter_close {
   flex: 0 !important;

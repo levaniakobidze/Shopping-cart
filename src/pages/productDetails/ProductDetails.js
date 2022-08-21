@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
 import classes from "./ProductDetails.module.css";
+import Card from "../../components/Card/Card";
+import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import Card from "../../components/Card/Card";
+import { addItemToCart } from "../../redux/slices/cartSlice";
+import { useNavigate } from "react-router-dom";
+import { openModal as cartModal } from "../../redux/slices/cartModalSlice";
 
 function ProductDetails() {
   const [product, setProduct] = useState([]);
@@ -10,9 +16,17 @@ function ProductDetails() {
   const [modalIndex, setModalIndex] = useState(index);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const items = useSelector((state) => state.cart.listItems);
+  const timeout = useSelector((state) => state.modal.timeout);
+  let navigate = useNavigate();
+
   const params = useParams();
+  const dispatch = useDispatch();
 
   useEffect(() => {
+    if (items.length < 1) {
+      navigate("/");
+      return;
+    }
     const filtered = items.filter((item) => item.id === params.Id.toString());
     setProduct(filtered);
   }, []);
@@ -26,6 +40,17 @@ function ProductDetails() {
   };
   const handleClick = (e) => {
     e.stopPropagation();
+  };
+
+  const addItemToCartHandler = (id) => {
+    dispatch(addItemToCart(id));
+    dispatch(cartModal());
+    setTimeout(() => {
+      if (timeout) {
+        console.log(timeout);
+        dispatch(closeModal());
+      }
+    }, 300);
   };
 
   return (
@@ -97,7 +122,29 @@ function ProductDetails() {
                 </p>
               </div>
             </div>
-            <div className={classes.checkout}></div>
+            <div className={classes.checkout}>
+              <div className={classes.checkout_wrapper}>
+                <h3 className={classes.price}>${product[0].price}</h3>
+                <div className={classes.follow_price}>
+                  <RemoveRedEyeOutlinedIcon
+                    className={classes.follow_price_icon}
+                  />
+                  Follow price
+                </div>
+                <div className={classes.protection}>
+                  <LockOutlinedIcon className={classes.protection_icon} />
+                  Price protection
+                </div>
+                <div className={classes.btns}>
+                  <button
+                    className={classes.add_to_cart_btn}
+                    onClick={() => addItemToCartHandler(product[0].id)}>
+                    <LocalMallOutlinedIcon />
+                  </button>
+                  <button className={classes.buy_now_btn}>Buy Now</button>
+                </div>
+              </div>
+            </div>
           </>
         )}
       </Card>

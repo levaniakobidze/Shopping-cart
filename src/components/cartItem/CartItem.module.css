@@ -17,7 +17,7 @@
 .cart_item_title {
   width: 210px;
   font-size: 15px;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   color: rgb(58, 58, 58);
 }
 .btns_cont {
@@ -26,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgb(220, 220, 220);
+  border: 1px solid rgb(240, 240, 240);
   padding: 10px 10px;
 }
 .increase,
@@ -44,9 +44,9 @@
   font-size: 16px;
 }
 .remove_btn {
-  width: 140px;
+  width: 120px;
   height: 40px;
-  border: 1px solid var(--main-purple);
+  /* border: 1px solid var(--main-purple); */
   outline: 0;
   background-color: var(--main-white);
   color: var(--main-purple);
@@ -56,6 +56,8 @@
   letter-spacing: 2px;
   cursor: pointer;
   transition: all 0.3s;
+  border: 0;
+  box-shadow: 0 0 10px 1px rgb(232, 232, 232);
 }
 .remove_btn:hover {
   background-color: var(--main-purple);

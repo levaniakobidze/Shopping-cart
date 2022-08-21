@@ -1,22 +1,24 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Card from "../Card/Card";
 import classes from "./Navbar.module.css";
+import CartModal from "../cartModal/CartModal";
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
+import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
+import LaptopChromebookRoundedIcon from "@mui/icons-material/LaptopChromebookRounded";
+import HeadphonesIcon from "@mui/icons-material/Headphones";
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import TvIcon from "@mui/icons-material/Tv";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import { phonesList, tvList, laptopsList } from "../../cartItems";
 import { addItemsList } from "../../redux/slices/cartSlice";
-import {
-  openModal,
-  closeModal,
-  openModalPermanently,
-  stopTimeout,
-} from "../../redux/slices/cartModalSlice";
-import CartModal from "../cartModal/CartModal";
+import { openModalPermanently } from "../../redux/slices/cartModalSlice";
+
 function Navbar() {
   const { amount } = useSelector((state) => state.cart);
   const { isModalOpen } = useSelector((state) => state.modal);
-  const { cartItems } = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
 
   const addItemsListHandler = (e) => {
@@ -45,41 +47,54 @@ function Navbar() {
           <ul className={classes.navbar_menu}>
             <li>
               <Link to='/' className={classes.navbar_menu_link}>
+                <HomeOutlinedIcon className={classes.home_icon} />
                 Home
               </Link>
             </li>
             <li className={classes.navigation}>
+              <KeyboardArrowDownOutlinedIcon
+                className={classes.arrow_down_icon}
+              />
               Navigation
               <div className={classes.navigation_dropdown_menu}>
                 <Link
-                  to={"/list"}
+                  to={"/list/phones"}
                   onClick={addItemsListHandler}
                   className={classes.dropdown_menu_link}>
+                  <PhoneIphoneRoundedIcon
+                    className={classes.nav_drop_menu_icon}
+                  />
                   Phones
                 </Link>
                 <Link
-                  to={"/list"}
+                  to={"/list/tv"}
                   onClick={addItemsListHandler}
                   className={classes.dropdown_menu_link}>
+                  <TvIcon className={classes.nav_drop_menu_icon} />
                   TV
                 </Link>
                 <Link
-                  to={"/list"}
+                  to={"/list/laptops"}
                   onClick={addItemsListHandler}
                   className={classes.dropdown_menu_link}>
+                  <LaptopChromebookRoundedIcon
+                    className={classes.nav_drop_menu_icon}
+                  />
                   Laptops
                 </Link>
                 <Link
                   to={"/list"}
                   onClick={addItemsListHandler}
                   className={classes.dropdown_menu_link}>
+                  <HeadphonesIcon className={classes.nav_drop_menu_icon} />
                   Headphones
                 </Link>
                 <Link
                   to={"/list"}
                   onClick={addItemsListHandler}
                   className={classes.dropdown_menu_link}>
-                  Bluetooth dynamics
+                  <CameraAltIcon className={classes.nav_drop_menu_icon} />
+                  Cameras
                 </Link>
               </div>
             </li>

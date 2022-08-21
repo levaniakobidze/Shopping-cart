@@ -28,14 +28,11 @@ function CartModal() {
     dispatch(removeItemFromCart(id));
   };
 
-  const openModalHandler = () => {
-    dispatch(stopTimeout());
-  };
   const closeModalHandler = () => {
     dispatch(addTimeout());
     setTimeout(() => {
       dispatch(closeModal());
-    }, 1000);
+    }, 100);
   };
 
   const closeCartModal = () => {
@@ -43,10 +40,7 @@ function CartModal() {
   };
 
   return (
-    <div
-      className={classes.cart_modal}
-      onMouseOver={openModalHandler}
-      onMouseLeave={closeModalHandler}>
+    <div className={classes.cart_modal} onMouseLeave={closeModalHandler}>
       <div className={classes.wrapper}>
         {cartItems.length == 0 && (
           <h1 className={classes.empty}>Cart is empty</h1>
