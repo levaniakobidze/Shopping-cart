@@ -58,6 +58,7 @@
   width: 220px;
   height: 30px;
   padding: 0 10px;
+  margin: 10px 0;
   color: var(--main-white);
   background-color: var(--main-purple);
   transition: all 0.6s;
@@ -170,7 +171,7 @@
     width: 100%;
     border-radius: 8px;
     padding: 20px 20px !important;
-    height: 300px;
+    height: 330px;
   }
   .filter_close {
     flex: 0 !important;
@@ -191,11 +192,15 @@
   }
   .brands_list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between !important;
-    width: 370px;
+    width: 240px;
   }
   .brands_list li {
-    margin-right: 10px;
+    /* margin-right: 10px; */
+    display: inline;
+    width: 60px;
+    margin: 0 4px;
   }
 
   .title_and_burger {
@@ -206,5 +211,36 @@
   }
   .filters_wrapper_hide {
     position: static !important;
+  }
+}
+
+@media screen and (max-width: 336px) {
+  .brands_list {
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .brands_list {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 316px) {
+  .filter {
+    height: 380px;
+  }
+  .brands_list {
+    width: 180px;
+  }
+  .search_filter input {
+    width: 190px;
+    height: 25px;
+  }
+  .price_from,
+  .price_to {
+    width: 40px;
+  }
+  .price_filter_inputs {
+    justify-content: space-between;
   }
 }

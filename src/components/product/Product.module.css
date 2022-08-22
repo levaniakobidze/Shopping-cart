@@ -160,7 +160,31 @@
 
 @media screen and (max-width: 351px) {
   .product_wrapper {
-    width: 290px !important;
+    width: 230px !important;
+    height: 299px;
+  }
+  .product_title {
+    font-size: 16px;
+    padding: 0 5px;
+    color: rgb(14, 14, 14);
+  }
+}
+
+@media screen and (max-width: 296px) {
+  .product_wrapper {
+    width: 200px !important;
+    height: 299px;
+  }
+  .product_title {
+    font-size: 16px;
+    padding: 0 5px;
+    color: rgb(14, 14, 14);
+  }
+}
+
+@media screen and (max-width: 267px) {
+  .product_wrapper {
+    width: 190px !important;
     height: 299px;
   }
   .product_title {

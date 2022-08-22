@@ -148,3 +148,20 @@
   font-size: 15px !important;
   margin-right: 5px;
 }
+
+/* /////////////////////////////////// */
+
+@media screen and (max-width: 552px) {
+  .navbar_menu_link {
+    margin: 0 7px;
+  }
+  .navbar_menu {
+    margin-right: 10px;
+  }
+  .logo {
+    width: 50px !important;
+  }
+  .logo_item {
+    width: 100%;
+  }
+}
