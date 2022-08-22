@@ -1,5 +1,6 @@
 .navbar {
   width: 100%;
+  min-height: 80px !important;
   position: fixed;
   top: 0;
   right: 0;

@@ -15,6 +15,7 @@
   flex: 1;
   display: flex;
   flex-wrap: wrap;
+  justify-content: left;
   gap: 10px;
   padding: 20px 10px;
   min-height: 100vh;
@@ -26,7 +27,7 @@
     flex-direction: column;
   }
 }
-@media screen and (max-width: 741px) {
+@media screen and (max-width: 787px) {
   .list_wrapper {
     display: flex;
     justify-content: center;
