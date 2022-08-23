@@ -1,5 +1,4 @@
 .productListing {
-  margin-top: 75px;
   display: flex;
   background-color: var(--main-grey);
 }

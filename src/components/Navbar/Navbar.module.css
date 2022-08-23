@@ -1,11 +1,10 @@
 .navbar {
   width: 100%;
-  min-height: 80px !important;
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   background-color: var(--main-white);
-  box-shadow: 0px 0px 5px 0.001px grey;
+  border-bottom: 1px solid rgb(228, 228, 228);
   z-index: 10000000;
 }
 
@@ -13,7 +12,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 .logo {
   display: flex;
@@ -44,6 +42,7 @@
 .navbar_and_cart_wrapper {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .cart {
   padding: 0px 5px;
@@ -80,36 +79,27 @@
   list-style: none;
 }
 
-.navbar_menu_link {
+.navbar_menu a {
   text-decoration: none;
   margin: 0 20px;
-  padding: 20px 0;
+  padding: 30px 0;
   color: var(--main-purple);
   letter-spacing: 1px;
   font-weight: bold;
   display: flex;
   align-items: center;
   font-size: 14px !important;
+  border-bottom: 2px solid white;
+  transition: all 0.3s;
+}
+.navbar_menu a:hover {
+  border-bottom: 2px solid var(--main-purple);
 }
 .home_icon {
   margin-right: 3px;
   font-size: 18px;
 }
 
-.navigation {
-  position: relative;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding: 30px 0;
-  color: var(--main-purple);
-  letter-spacing: 1px;
-  font-weight: bold;
-  font-size: 14px !important;
-}
-.navigation:hover .navigation_dropdown_menu {
-  display: flex;
-}
 .arrow_down_icon {
   margin-right: 3px;
   font-size: 18px;
@@ -120,7 +110,7 @@
   position: absolute;
   background-color: var(--main-purple);
   min-width: 190px;
-  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   top: 100%;
   flex-direction: column;
@@ -139,17 +129,10 @@
   align-items: center;
 }
 
-.dropdown_menu_link:hover {
-  background-color: var(--main-purple-light);
-  color: var(--main-white);
-}
-
 .nav_drop_menu_icon {
   font-size: 15px !important;
   margin-right: 5px;
 }
-
-/* /////////////////////////////////// */
 
 @media screen and (max-width: 552px) {
   .navbar_menu_link {

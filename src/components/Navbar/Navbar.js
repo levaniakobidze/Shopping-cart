@@ -39,72 +39,55 @@ function Navbar() {
 
   return (
     <nav className={classes.navbar}>
+      {isModalOpen && <CartModal />}
       <Card className={classes.navbar_card}>
         <Link to='/' className={classes.logo}>
           <span className={classes.logo_item}>Tech-Shop</span>
         </Link>
         <div className={classes.navbar_and_cart_wrapper}>
           <ul className={classes.navbar_menu}>
-            <li>
-              <Link to='/' className={classes.navbar_menu_link}>
-                <HomeOutlinedIcon className={classes.home_icon} />
-                Home
-              </Link>
-            </li>
-            <li className={classes.navigation}>
-              <KeyboardArrowDownOutlinedIcon
-                className={classes.arrow_down_icon}
+            <Link
+              to={"/list/phones"}
+              onClick={addItemsListHandler}
+              className={classes.dropdown_menu_link}>
+              <PhoneIphoneRoundedIcon className={classes.nav_drop_menu_icon} />
+              Phones
+            </Link>
+            <Link
+              to={"/list/tv"}
+              onClick={addItemsListHandler}
+              className={classes.dropdown_menu_link}>
+              <TvIcon className={classes.nav_drop_menu_icon} />
+              TV
+            </Link>
+            <Link
+              to={"/list/laptops"}
+              onClick={addItemsListHandler}
+              className={classes.dropdown_menu_link}>
+              <LaptopChromebookRoundedIcon
+                className={classes.nav_drop_menu_icon}
               />
-              Navigation
-              <div className={classes.navigation_dropdown_menu}>
-                <Link
-                  to={"/list/phones"}
-                  onClick={addItemsListHandler}
-                  className={classes.dropdown_menu_link}>
-                  <PhoneIphoneRoundedIcon
-                    className={classes.nav_drop_menu_icon}
-                  />
-                  Phones
-                </Link>
-                <Link
-                  to={"/list/tv"}
-                  onClick={addItemsListHandler}
-                  className={classes.dropdown_menu_link}>
-                  <TvIcon className={classes.nav_drop_menu_icon} />
-                  TV
-                </Link>
-                <Link
-                  to={"/list/laptops"}
-                  onClick={addItemsListHandler}
-                  className={classes.dropdown_menu_link}>
-                  <LaptopChromebookRoundedIcon
-                    className={classes.nav_drop_menu_icon}
-                  />
-                  Laptops
-                </Link>
-                <Link
-                  to={"/list"}
-                  onClick={addItemsListHandler}
-                  className={classes.dropdown_menu_link}>
-                  <HeadphonesIcon className={classes.nav_drop_menu_icon} />
-                  Headphones
-                </Link>
-                <Link
-                  to={"/list"}
-                  onClick={addItemsListHandler}
-                  className={classes.dropdown_menu_link}>
-                  <CameraAltIcon className={classes.nav_drop_menu_icon} />
-                  Cameras
-                </Link>
-              </div>
-            </li>
+              Laptops
+            </Link>
+            <Link
+              to={"/list"}
+              onClick={addItemsListHandler}
+              className={classes.dropdown_menu_link}>
+              <HeadphonesIcon className={classes.nav_drop_menu_icon} />
+              Headphones
+            </Link>
+            <Link
+              to={"/list"}
+              onClick={addItemsListHandler}
+              className={classes.dropdown_menu_link}>
+              <CameraAltIcon className={classes.nav_drop_menu_icon} />
+              Cameras
+            </Link>
           </ul>
           <div className={classes.cart} onClick={openCartModalHandler}>
             <LocalMallOutlinedIcon className={classes.cart_logo} />
             <span className={classes.amount}>{amount}</span>
           </div>
-
-          {isModalOpen && <CartModal />}
         </div>
       </Card>
     </nav>

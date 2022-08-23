@@ -12,7 +12,7 @@
   width: 900px;
   min-height: 80vh;
   background-color: var(--main-white);
-  margin-top: 95px;
+  margin-top: 15px;
   border-radius: 5px;
   border-radius: 5px;
   display: flex;
@@ -60,8 +60,9 @@
   align-items: center;
 }
 .modal_wrapper {
-  min-width: 700px;
-  min-height: 500px;
+  width: 700px;
+  margin: 30px;
+  height: 500px;
   background-color: var(--main-white);
   z-index: 10000000000000000000000000000000000000;
   border-radius: 5px;
@@ -131,7 +132,7 @@
 .checkout {
   min-width: 300px;
   margin-left: 20px;
-  margin-top: 95px;
+  margin-top: 15px;
   border-radius: 5px;
   position: relative;
 }
@@ -142,7 +143,7 @@
   width: 100%;
   padding: 20px 20px;
   position: sticky;
-  top: 14%;
+  top: 15%;
   /* border: 1px solid rgb(48, 52, 110); */
 }
 
@@ -233,6 +234,32 @@
   }
 }
 
+@media screen and (max-width: 759px) {
+  .modal_wrapper {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 547px) {
+  .modal_wrapper {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .modal_wrapper {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 367px) {
+  .modal_wrapper {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 333px) {
+  .modal_wrapper {
+    width: 260px;
+  }
+}
 @media screen and (max-width: 425px) {
   .product_imgs {
     width: 300px;

@@ -6,17 +6,16 @@ import {
   decreaseAmount,
   removeItemFromCart,
 } from "../../redux/slices/cartSlice";
-import {
-  closeModal,
-  stopTimeout,
-  addTimeout,
-} from "../../redux/slices/cartModalSlice";
+import { closeModal, addTimeout } from "../../redux/slices/cartModalSlice";
 import { Link } from "react-router-dom";
 
-function CartModal() {
+function CartModal({ isModalAcitve }) {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
   const total = useSelector((state) => state.cart.total);
+  const { isModalOpen } = useSelector((state) => state.modal);
+
+  console.log(isModalOpen);
 
   const decreaseHandler = (id) => {
     dispatch(decreaseAmount(id));
@@ -40,8 +39,15 @@ function CartModal() {
   };
 
   return (
-    <div className={classes.cart_modal} onMouseLeave={closeModalHandler}>
+    <div
+      className={
+        !isModalOpen
+          ? classes.cart_modal
+          : `${classes.cart_modal} ${classes.cart_modal_active} `
+      }
+      onMouseLeave={closeModalHandler}>
       <div className={classes.wrapper}>
+        <h3 className={classes.cart_title}>Cart</h3>
         {cartItems.length == 0 && (
           <h1 className={classes.empty}>Cart is empty</h1>
         )}

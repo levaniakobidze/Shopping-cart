@@ -1,5 +1,4 @@
 .cart {
-  margin-top: 80px;
   width: 100%;
   background-color: var(--main-grey);
   min-height: 100vh;
@@ -14,21 +13,22 @@
   font-size: 27px;
   color: rgb(61, 61, 61);
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .cart_items_wrapper {
   flex: 0.67;
-  min-height: 100vh;
+  min-height: 50vh;
   background-color: var(--main-white);
   margin-top: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  border-radius: 10px;
 }
 .list {
-  min-height: 100vh;
+  min-height: 30vh;
 }
 .total_wrapper {
   flex: 0.2;
@@ -41,6 +41,7 @@
   position: sticky;
   top: 14%;
   background-color: var(--main-white);
+  border-radius: 10px;
 }
 
 .clear_cart {
@@ -89,4 +90,5 @@
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
+  border-radius: 4px;
 }
