@@ -4,7 +4,7 @@
   max-height: 90vh;
   position: fixed;
   top: 13.5%;
-  right: -10%;
+  right: 0%;
   display: flex;
   flex-direction: column;
   box-shadow: 5px 10px 30px 1px rgb(166, 166, 166);
@@ -13,9 +13,6 @@
   padding-bottom: 20px;
   padding-left: 5px;
   transition: all 0.3s;
-}
-.cart_modal_active {
-  right: 10% !important;
 }
 .wrapper {
   overflow-y: scroll;
@@ -139,4 +136,10 @@
 }
 .open_cart_btn:hover {
   background-color: var(--main-purple);
+}
+
+@media screen and (max-width: 787px) {
+  .cart_modal {
+    top: 11.3%;
+  }
 }

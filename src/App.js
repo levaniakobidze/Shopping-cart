@@ -8,7 +8,9 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { calculate } from "./redux/slices/cartSlice";
 import { Home } from "@mui/icons-material";
-import { openModal, closeModal } from "./redux/slices/cartModalSlice";
+import { closeModal } from "./redux/slices/cartModalSlice";
+import { closeFilter } from "./redux/slices/cartSlice";
+import { closeMenu } from "./redux/slices/navbarSlice";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,6 +23,15 @@ function App() {
   useEffect(() => {
     dispatch(closeModal());
   }, []);
+
+  ////////// Close filter onload on mobiles //////
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth < 787) {
+      dispatch(closeFilter());
+      dispatch(closeMenu());
+    }
+  });
 
   return (
     <div className='App'>

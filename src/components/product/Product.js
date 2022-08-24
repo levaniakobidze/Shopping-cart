@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classes from "./Product.module.css";
 import { addItemToCart } from "../../redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
-import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { closeModal, openModal } from "../../redux/slices/cartModalSlice";
 import { Link } from "react-router-dom";
 
@@ -38,7 +38,7 @@ function Product({ id, amount, img, title, price }) {
         </div>
       </Link>
       <button className={classes.add_btn} onClick={() => addToCartHandler(id)}>
-        <LocalMallOutlinedIcon />
+        <ShoppingCartOutlinedIcon />
       </button>
     </div>
   );

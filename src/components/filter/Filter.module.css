@@ -6,6 +6,7 @@
   border-radius: 5px;
   padding: 10px 10px;
   height: 100%;
+  margin-bottom: 20px;
 }
 .filter_close {
   flex: 0;
@@ -42,7 +43,8 @@
   position: sticky;
   top: 20%;
   display: hidden;
-  opacity: 0;
+  opacity: 1;
+  display: none;
 }
 .filters_wrapper_hide > .search_filter input {
   width: 20px;
@@ -185,6 +187,7 @@
   .filter_price {
     margin-left: 10px;
     margin-top: 10px;
+    opacity: 1 !important;
   }
 
   .filters_wrapper {
@@ -197,7 +200,6 @@
     width: 240px;
   }
   .brands_list li {
-    /* margin-right: 10px; */
     display: inline;
     width: 60px;
     margin: 0 4px;

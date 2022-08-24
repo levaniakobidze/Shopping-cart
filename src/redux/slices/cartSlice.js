@@ -60,6 +60,9 @@ const cartSlice = createSlice({
     toggleFilter: (state) => {
       state.filterActive = !state.filterActive;
     },
+    closeFilter: (state) => {
+      state.filterActive = false;
+    },
     filterWithSearch: (state, { payload }) => {
       const filtered = state.initialItems.filter((item) =>
         item.title.toLowerCase().includes(payload.toLowerCase())
@@ -99,6 +102,7 @@ export const {
   decreaseAmount,
   calculate,
   toggleFilter,
+  closeFilter,
   filterWithSearch,
   filterBrands,
   filterPrice,

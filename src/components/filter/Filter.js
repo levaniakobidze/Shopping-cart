@@ -7,6 +7,7 @@ import {
   filterPrice,
   restart,
   toggleFilter,
+  closeFilter,
 } from "../../redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ReplayIcon from "@mui/icons-material/Replay";
@@ -41,6 +42,8 @@ function Filter(props) {
     priceToRef.current.value = "";
     dispatch(restart());
   };
+
+  /////// Generate unique brends name /////
 
   if (items.length > 0) {
     items.map((item) => {

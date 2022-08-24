@@ -72,7 +72,7 @@
   outline: 0;
   color: var(--main-purple);
   background-color: var(--main-white);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: bold;
   /* margin: 15px; */
   cursor: pointer;
@@ -83,6 +83,7 @@
   position: absolute;
   right: 3%;
   bottom: 5%;
+  border: 1px solid rgb(243, 243, 243);
 }
 .add_btn:hover {
   background-color: var(--main-purple);
@@ -101,6 +102,9 @@
     width: 170px !important;
     height: 300px;
     background-color: var(--main-white);
+  }
+  .product_wrapper {
+    margin-top: 10px !important;
   }
 }
 
@@ -128,13 +132,6 @@
   }
 }
 
-/* @media screen and (max-width: 613px) {
-  .product_wrapper {
-    width: 350px;
-    height: 305px;
-    background-color: var(--main-white);
-  }
-} */
 @media screen and (max-width: 469px) {
   .product_wrapper {
     width: 150px !important;

@@ -4,8 +4,10 @@ import classes from "./Navbar.module.css";
 import CartModal from "../cartModal/CartModal";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import MenuIcon from "@mui/icons-material/Menu";
 import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
+import CloseSharpIcon from "@mui/icons-material/CloseSharp";
 import LaptopChromebookRoundedIcon from "@mui/icons-material/LaptopChromebookRounded";
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
@@ -15,10 +17,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { phonesList, tvList, laptopsList } from "../../cartItems";
 import { addItemsList } from "../../redux/slices/cartSlice";
 import { openModalPermanently } from "../../redux/slices/cartModalSlice";
+import { closeMenu, toggleMenu } from "../../redux/slices/navbarSlice";
 
 function Navbar() {
   const { amount } = useSelector((state) => state.cart);
   const { isModalOpen } = useSelector((state) => state.modal);
+  const { activeMenu } = useSelector((state) => state.navMenu);
+
   const dispatch = useDispatch();
 
   const addItemsListHandler = (e) => {
@@ -37,15 +42,35 @@ function Navbar() {
     dispatch(openModalPermanently());
   };
 
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
+  const closeMenuHandler = () => {
+    dispatch(closeMenu());
+  };
+
   return (
     <nav className={classes.navbar}>
       {isModalOpen && <CartModal />}
       <Card className={classes.navbar_card}>
+        <div className={classes.burger_menu} onClick={toggleMenuHandler}>
+          {!activeMenu ? (
+            <MenuIcon className={classes.burger_menu_icon} />
+          ) : (
+            <CloseSharpIcon className={classes.close_menu_icon} />
+          )}
+        </div>
         <Link to='/' className={classes.logo}>
-          <span className={classes.logo_item}>Tech-Shop</span>
+          Tech Shop
         </Link>
         <div className={classes.navbar_and_cart_wrapper}>
-          <ul className={classes.navbar_menu}>
+          <ul
+            className={
+              !activeMenu
+                ? classes.navbar_menu
+                : `${classes.navbar_menu} ${classes.navbar_menu_active}`
+            }
+            onClick={closeMenuHandler}>
             <Link
               to={"/list/phones"}
               onClick={addItemsListHandler}
@@ -85,7 +110,7 @@ function Navbar() {
             </Link>
           </ul>
           <div className={classes.cart} onClick={openCartModalHandler}>
-            <LocalMallOutlinedIcon className={classes.cart_logo} />
+            <ShoppingCartOutlinedIcon className={classes.cart_logo} />
             <span className={classes.amount}>{amount}</span>
           </div>
         </div>
