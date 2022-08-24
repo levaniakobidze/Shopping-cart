@@ -2,14 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
 let toastObj = {
-  position: toast.POSITION.BOTTOM_RIGHT,
+  position: toast.POSITION.BOTTOM_CENTER,
   autoClose: 600,
   hideProgressBar: false,
   closeOnClick: true,
   pauseOnHover: true,
   draggable: true,
   progress: undefined,
-  // theme: "dark",
+  theme: "dark",
 };
 const initialState = {
   initialItems: [],
@@ -49,11 +49,13 @@ const cartSlice = createSlice({
     clearCart: (state) => {
       state.cartItems = [];
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      toast.error("Cart is clear", toastObj);
     },
     removeItemFromCart: (state, { payload }) => {
       const filtered = state.cartItems.filter((item) => item.id !== payload);
       state.cartItems = filtered;
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+      toast.error("Item has been removed", toastObj);
     },
     increaseAmount: (state, { payload }) => {
       const item = state.cartItems.find((item) => item.id === payload);

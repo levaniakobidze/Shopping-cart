@@ -5,6 +5,7 @@
   right: 0;
   background-color: var(--main-white);
   border-bottom: 1px solid rgb(228, 228, 228);
+  box-shadow: 0px 0px 10px 1px rgb(148, 148, 148);
   z-index: 10000000;
 }
 
@@ -22,6 +23,9 @@
 
 .burger_menu_icon {
   font-size: 25px;
+}
+.close_icon_cont {
+  display: none;
 }
 .close_menu_icon {
   font-size: 25px;
@@ -85,7 +89,7 @@
   text-decoration: none;
   margin: 0 20px;
   padding: 30px 0;
-  color: var(--main-purple);
+  color: rgb(118, 118, 118);
   letter-spacing: 1px;
   font-weight: bold;
   display: flex;
@@ -96,6 +100,7 @@
 }
 .navbar_menu a:hover {
   border-bottom: 2px solid var(--main-purple);
+  color: var(--main-purple);
 }
 .home_icon {
   margin-right: 3px;
@@ -175,7 +180,7 @@
     justify-content: top;
     align-items: center;
     flex-direction: column;
-    z-index: 100000000000000000000000000000000000;
+    z-index: 111122222222222222222222222222222222222222222222222;
   }
   .navbar_menu a {
     color: var(--main-purple);

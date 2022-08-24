@@ -71,7 +71,8 @@
   margin-top: 20px;
 }
 .search_filter input {
-  border: 1px solid var(--main-purple);
+  border: 0;
+  border-radius: 5px;
   outline: 0;
   width: 210px;
   height: 30px;
@@ -84,7 +85,7 @@
 
 .search_filter input::placeholder {
   color: var(--main-white);
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 2px;
 }
 .filter_brands {
