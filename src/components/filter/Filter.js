@@ -59,13 +59,11 @@ function Filter(props) {
         active ? classes.filter : `${classes.Filter} ${classes.filter_close}`
       }>
       <div className={classes.title_and_burger}>
-        <div className={classes.burger_icon_cont}>
-          <MenuIcon
-            className={classes.burger_icon}
-            onClick={() => dispatch(toggleFilter())}
-          />
-        </div>
-        <h4 className={classes.title}>{""}</h4>
+        <MenuIcon
+          className={classes.burger_icon}
+          onClick={() => dispatch(toggleFilter())}
+        />
+        <h4 className={classes.title}>Filter</h4>
       </div>
       {/* ////////////////////////////////// */}
 

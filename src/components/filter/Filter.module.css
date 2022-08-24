@@ -16,6 +16,18 @@
   transition: all 0.3s;
   padding: 10px 10px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.filter_close > .title_and_burger {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+}
+.filter_close > .title_and_burger > .title {
+  transform: rotate(90deg);
+  margin-left: 0px !important;
+  margin-top: 50px;
 }
 .title_and_burger {
   display: flex;
@@ -24,10 +36,13 @@
   top: 15%;
 }
 .title {
-  margin-left: 50px;
-  font-size: 20px;
-  letter-spacing: 2px;
+  margin-left: 13px;
+  font-size: 17px;
+  letter-spacing: 4px;
+  color: rgb(172, 172, 172);
+  transition: all 0.1s;
 }
+
 .burger_icon {
   font-size: 25px;
   color: var(--main-purple);
@@ -53,11 +68,12 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 .search_filter input {
   border: 1px solid var(--main-purple);
   outline: 0;
-  width: 220px;
+  width: 210px;
   height: 30px;
   padding: 0 10px;
   margin: 10px 0;
@@ -92,7 +108,7 @@
   margin: 0px 0px;
   color: var(--main-purple);
   cursor: pointer;
-  padding: 12px 0;
+  padding: 7px 0;
   transition: all 0.3s;
 }
 .brands_list li:hover {
@@ -182,6 +198,23 @@
     background-color: var(--main-white);
     margin-top: 20px;
     transition: all 0.3s;
+    display: flex;
+    justify-content: left;
+  }
+  .filter_close > .title_and_burger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .filter_close > .title_and_burger .title {
+    display: block;
+    transform: rotate(0deg);
+    margin-top: 0 !important;
+    margin-left: 30px !important;
+    font-size: 16px;
+  }
+  .title {
+    display: none;
   }
   .filter_brands,
   .filter_price {

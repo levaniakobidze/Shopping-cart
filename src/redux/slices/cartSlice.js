@@ -7,7 +7,7 @@ const initialState = {
   amount: 0,
   total: 0,
   isLoading: false,
-  filterActive: true,
+  filterActive: false,
 };
 
 const cartSlice = createSlice({

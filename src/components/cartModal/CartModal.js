@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./CartModal.module.css";
+import CloseSharpIcon from "@mui/icons-material/CloseSharp";
 import { useSelector, useDispatch } from "react-redux";
 import {
   increaseAmount,
@@ -38,7 +39,13 @@ function CartModal({ isModalAcitve }) {
   return (
     <div className={classes.cart_modal} onMouseLeave={closeModalHandler}>
       <div className={classes.wrapper}>
-        <h3 className={classes.cart_title}>Cart</h3>
+        <div className={classes.title_and_close}>
+          <h3 className={classes.cart_title}>Cart</h3>
+          <CloseSharpIcon
+            onClick={closeCartModal}
+            className={classes.close_icon}
+          />
+        </div>
         {cartItems.length == 0 && (
           <h1 className={classes.empty}>Cart is empty</h1>
         )}

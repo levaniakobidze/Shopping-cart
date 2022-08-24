@@ -26,12 +26,12 @@ function App() {
 
   ////////// Close filter onload on mobiles //////
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth < 787) {
-      dispatch(closeFilter());
-      dispatch(closeMenu());
-    }
-  });
+  // window.addEventListener("onload", () => {
+  //   if (window.innerWidth < 787) {
+  //     dispatch(closeFilter());
+  //     dispatch(closeMenu());
+  //   }
+  // });
 
   return (
     <div className='App'>

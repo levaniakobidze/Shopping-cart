@@ -15,7 +15,7 @@ import TvIcon from "@mui/icons-material/Tv";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { phonesList, tvList, laptopsList } from "../../cartItems";
-import { addItemsList } from "../../redux/slices/cartSlice";
+import { addItemsList, closeFilter } from "../../redux/slices/cartSlice";
 import { openModalPermanently } from "../../redux/slices/cartModalSlice";
 import { closeMenu, toggleMenu } from "../../redux/slices/navbarSlice";
 
@@ -47,6 +47,7 @@ function Navbar() {
   };
   const closeMenuHandler = () => {
     dispatch(closeMenu());
+    dispatch(closeFilter());
   };
 
   return (
@@ -54,11 +55,7 @@ function Navbar() {
       {isModalOpen && <CartModal />}
       <Card className={classes.navbar_card}>
         <div className={classes.burger_menu} onClick={toggleMenuHandler}>
-          {!activeMenu ? (
-            <MenuIcon className={classes.burger_menu_icon} />
-          ) : (
-            <CloseSharpIcon className={classes.close_menu_icon} />
-          )}
+          <MenuIcon className={classes.burger_menu_icon} />
         </div>
         <Link to='/' className={classes.logo}>
           Tech Shop
@@ -71,6 +68,9 @@ function Navbar() {
                 : `${classes.navbar_menu} ${classes.navbar_menu_active}`
             }
             onClick={closeMenuHandler}>
+            <div className={classes.close_icon_cont}>
+              <CloseSharpIcon className={classes.close_menu_icon} />
+            </div>
             <Link
               to={"/list/phones"}
               onClick={addItemsListHandler}
