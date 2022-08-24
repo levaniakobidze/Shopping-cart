@@ -1,9 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
+let toastObj = {
+  position: toast.POSITION.BOTTOM_RIGHT,
+  autoClose: 600,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  // theme: "dark",
+};
 const initialState = {
   initialItems: [],
   listItems: [],
-  cartItems: [],
+  cartItems: localStorage.getItem("cartItems")
+    ? JSON.parse(localStorage.getItem("cartItems"))
+    : [],
   amount: 0,
   total: 0,
   isLoading: false,
@@ -21,17 +34,26 @@ const cartSlice = createSlice({
     addItemToCart: (state, { payload }) => {
       const singleItem = state.listItems.find((item) => item.id === payload);
       const itemIsInCart = state.cartItems.find((item) => item.id === payload);
+
       if (itemIsInCart) {
+        toast.error("Item is in cart already", toastObj);
         return;
+      } else {
+        toast.success("Item added sucessfully", toastObj);
       }
+
       state.cartItems = [...state.cartItems, singleItem];
+
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     clearCart: (state) => {
       state.cartItems = [];
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     removeItemFromCart: (state, { payload }) => {
       const filtered = state.cartItems.filter((item) => item.id !== payload);
       state.cartItems = filtered;
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     increaseAmount: (state, { payload }) => {
       const item = state.cartItems.find((item) => item.id === payload);
@@ -39,6 +61,7 @@ const cartSlice = createSlice({
         return;
       }
       item.amount = item.amount + 1;
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     decreaseAmount: (state, { payload }) => {
       const item = state.cartItems.find((item) => item.id === payload);
@@ -46,6 +69,7 @@ const cartSlice = createSlice({
         return;
       }
       item.amount = item.amount - 1;
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
     calculate: (state) => {
       let amount = 0;

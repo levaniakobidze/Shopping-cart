@@ -30,6 +30,7 @@
   width: 100%;
   margin: 0 auto;
   cursor: zoom-in;
+  padding: 30px;
 }
 .main_img img {
   width: 100%;
@@ -72,6 +73,7 @@
   max-width: 500px;
   height: 390px;
   margin: 0 auto;
+  padding: 20px;
 }
 .main_modal_img img {
   object-fit: cover;

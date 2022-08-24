@@ -12,13 +12,6 @@ function Product({ id, amount, img, title, price }) {
   const dispatch = useDispatch();
   const addToCartHandler = (id) => {
     dispatch(addItemToCart(id));
-    dispatch(openModal());
-    setTimeout(() => {
-      if (timeout) {
-        console.log(timeout);
-        dispatch(closeModal());
-      }
-    }, 300);
   };
 
   return (

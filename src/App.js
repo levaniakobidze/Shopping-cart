@@ -1,4 +1,5 @@
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductsList from "./pages/productsList/ProductsList";
 import Cart from "./pages/cart/Cart";
@@ -9,8 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { calculate } from "./redux/slices/cartSlice";
 import { Home } from "@mui/icons-material";
 import { closeModal } from "./redux/slices/cartModalSlice";
-import { closeFilter } from "./redux/slices/cartSlice";
-import { closeMenu } from "./redux/slices/navbarSlice";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const dispatch = useDispatch();
@@ -24,18 +24,14 @@ function App() {
     dispatch(closeModal());
   }, []);
 
-  ////////// Close filter onload on mobiles //////
-
-  // window.addEventListener("onload", () => {
-  //   if (window.innerWidth < 787) {
-  //     dispatch(closeFilter());
-  //     dispatch(closeMenu());
-  //   }
-  // });
+  window.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
 
   return (
     <div className='App'>
       <Router>
+        <ToastContainer />
         <Navbar />
         <Routes>
           <Route path={"/"} element={<Home />} />

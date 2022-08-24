@@ -23,12 +23,17 @@ function ProductDetails() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (items.length < 1) {
-      navigate("/");
-      return;
-    }
     const filtered = items.filter((item) => item.id === params.Id.toString());
-    setProduct(filtered);
+
+    ///////// ADD PRODUCT DETAILS TO LOCALSTORAGE //////
+    if (filtered.length > 0) {
+      localStorage.setItem("productDetails", JSON.stringify(filtered));
+    }
+    const productFomLocalStorage = JSON.parse(
+      localStorage.getItem("productDetails")
+    );
+    console.log(productFomLocalStorage);
+    setProduct(filtered.length > 0 ? filtered : productFomLocalStorage);
   }, []);
 
   const openModal = () => {
@@ -44,13 +49,6 @@ function ProductDetails() {
 
   const addItemToCartHandler = (id) => {
     dispatch(addItemToCart(id));
-    dispatch(cartModal());
-    setTimeout(() => {
-      if (timeout) {
-        console.log(timeout);
-        dispatch(closeModal());
-      }
-    }, 300);
   };
 
   return (
