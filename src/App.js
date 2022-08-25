@@ -8,7 +8,7 @@ import ProductDetails from "./pages/productDetails/ProductDetails";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { calculate } from "./redux/slices/cartSlice";
-import { Home } from "@mui/icons-material";
+import Home from "./pages/home/Home";
 import { closeModal } from "./redux/slices/cartModalSlice";
 import { ToastContainer } from "react-toastify";
 

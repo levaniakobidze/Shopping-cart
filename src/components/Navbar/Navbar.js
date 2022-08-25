@@ -2,8 +2,6 @@ import React from "react";
 import Card from "../Card/Card";
 import classes from "./Navbar.module.css";
 import CartModal from "../cartModal/CartModal";
-import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import PhoneIphoneRoundedIcon from "@mui/icons-material/PhoneIphoneRounded";
