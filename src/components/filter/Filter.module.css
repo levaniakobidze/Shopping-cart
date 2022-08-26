@@ -10,30 +10,46 @@
 }
 .filter_close {
   flex: 0;
-  width: 45px;
-  background-color: var(--main-white);
+  width: 45px !important;
   margin-top: 20px;
   transition: all 0.3s;
   padding: 10px 10px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  background-color: var(--main-white);
+  position: relative;
 }
-.filter_close > .title_and_burger {
+.filter_close > .filter_wrapper > .title_and_burger {
   display: flex;
   flex-direction: column;
-  height: 100px;
+  height: 140px;
+  position: static;
 }
-.filter_close > .title_and_burger > .title {
+.filter_close > .filter_wrapper > .title_and_burger > .title {
   transform: rotate(90deg);
   margin-left: 0px !important;
   margin-top: 50px;
 }
+.filter_close > .filter_wrapper > .banner {
+  display: none;
+}
+.filter_wrapper {
+  background-color: var(--main-white);
+  position: relative;
+}
+.banner {
+  width: 100%;
+  display: block;
+}
+.banner img {
+  height: 20vh;
+}
 .title_and_burger {
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 15%;
+  position: absolute;
+  top: 0;
 }
 .title {
   margin-left: 13px;
@@ -49,14 +65,13 @@
   cursor: pointer;
 }
 .filters_wrapper {
-  position: sticky;
-  top: 20%;
   opacity: 1;
   transition: all 0.1s;
+  position: sticky;
+  top: 0%;
+  margin-top: 35px;
 }
 .filters_wrapper_hide {
-  position: sticky;
-  top: 20%;
   display: hidden;
   opacity: 1;
   display: none;
@@ -89,7 +104,7 @@
   letter-spacing: 2px;
 }
 .filter_brands {
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -100,7 +115,7 @@
 }
 .brands_list {
   width: 100%;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .brands_list li {
@@ -187,14 +202,28 @@
 /* //////////////////////////////// */
 @media screen and (max-width: 787px) {
   .filter {
-    width: 100%;
+    width: 100% !important;
     border-radius: 8px;
     padding: 20px 20px !important;
     height: 330px;
   }
+  .banner {
+    background-color: red;
+    display: none;
+  }
+  .banner img {
+    border-radius: 30px !important;
+    display: none;
+  }
+  .filters_wrapper {
+    width: 100% !important;
+  }
+  .filter_close > .filter_wrapper > .title_and_burger {
+    height: auto;
+    flex-direction: row;
+  }
   .filter_close {
-    flex: 0 !important;
-    width: 100%;
+    width: 100% !important;
     height: 45px;
     background-color: var(--main-white);
     margin-top: 20px;
@@ -207,7 +236,7 @@
     flex-direction: row;
     align-items: center;
   }
-  .filter_close > .title_and_burger .title {
+  .filter_close > .filter_wrapper > .title_and_burger .title {
     display: block;
     transform: rotate(0deg);
     margin-top: 0 !important;

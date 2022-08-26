@@ -15,12 +15,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { phonesList, tvList, laptopsList } from "../../cartItems";
 import { addItemsList, closeFilter } from "../../redux/slices/cartSlice";
 import { openModalPermanently } from "../../redux/slices/cartModalSlice";
-import { closeMenu, toggleMenu } from "../../redux/slices/navbarSlice";
+import {
+  closeMenu,
+  toggleMenu,
+  setActiveMenuLink,
+} from "../../redux/slices/navbarSlice";
 
 function Navbar() {
   const { amount } = useSelector((state) => state.cart);
   const { isModalOpen } = useSelector((state) => state.modal);
-  const { activeMenu } = useSelector((state) => state.navMenu);
+  const { activeMenu, activeMenuLink } = useSelector((state) => state.navMenu);
 
   const dispatch = useDispatch();
 
@@ -34,8 +38,10 @@ function Navbar() {
     if (e.target.innerText.toLowerCase() === "laptops") {
       dispatch(addItemsList(laptopsList));
     }
+    dispatch(setActiveMenuLink(e.target.innerText));
   };
 
+  console.log(activeMenuLink.payload);
   const openCartModalHandler = () => {
     dispatch(openModalPermanently());
   };
@@ -72,21 +78,33 @@ function Navbar() {
             <Link
               to={"/list/phones"}
               onClick={addItemsListHandler}
-              className={classes.dropdown_menu_link}>
+              className={
+                activeMenuLink.payload === "Phones"
+                  ? classes.active
+                  : classes.dropdown_menu_link
+              }>
               <PhoneIphoneRoundedIcon className={classes.nav_drop_menu_icon} />
               Phones
             </Link>
             <Link
               to={"/list/tv"}
               onClick={addItemsListHandler}
-              className={classes.dropdown_menu_link}>
+              className={
+                activeMenuLink.payload === "TV"
+                  ? classes.active
+                  : classes.dropdown_menu_link
+              }>
               <TvIcon className={classes.nav_drop_menu_icon} />
               TV
             </Link>
             <Link
               to={"/list/laptops"}
               onClick={addItemsListHandler}
-              className={classes.dropdown_menu_link}>
+              className={
+                activeMenuLink.payload === "Laptops"
+                  ? classes.active
+                  : classes.dropdown_menu_link
+              }>
               <LaptopChromebookRoundedIcon
                 className={classes.nav_drop_menu_icon}
               />
@@ -95,14 +113,22 @@ function Navbar() {
             <Link
               to={"/list"}
               onClick={addItemsListHandler}
-              className={classes.dropdown_menu_link}>
+              className={
+                activeMenuLink.payload === "Headphones"
+                  ? classes.active
+                  : classes.dropdown_menu_link
+              }>
               <HeadphonesIcon className={classes.nav_drop_menu_icon} />
               Headphones
             </Link>
             <Link
               to={"/list"}
               onClick={addItemsListHandler}
-              className={classes.dropdown_menu_link}>
+              className={
+                activeMenuLink.payload === "Cameras"
+                  ? classes.active
+                  : classes.dropdown_menu_link
+              }>
               <CameraAltIcon className={classes.nav_drop_menu_icon} />
               Cameras
             </Link>

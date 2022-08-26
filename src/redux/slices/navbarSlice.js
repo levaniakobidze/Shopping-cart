@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   activeMenu: false,
+  activeMenuLink: "",
 };
 
 const navbarSlice = createSlice({
@@ -14,9 +15,12 @@ const navbarSlice = createSlice({
     closeMenu: (state) => {
       state.activeMenu = false;
     },
+    setActiveMenuLink: (state, payload) => {
+      state.activeMenuLink = payload;
+    },
   },
 });
 
-export const { toggleMenu, closeMenu } = navbarSlice.actions;
+export const { toggleMenu, closeMenu, setActiveMenuLink } = navbarSlice.actions;
 
 export default navbarSlice.reducer;

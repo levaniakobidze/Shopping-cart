@@ -31,17 +31,16 @@
   font-size: 25px;
 }
 .logo {
-  width: 110px;
-  height: 39px;
+  padding: 10px 10px;
   margin-right: 1px;
-  background-color: var(--main-purple);
-  border-radius: 10px;
-  color: var(--main-white);
+  border-bottom: 2px solid black;
+  color: var(--main-purple);
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 20px;
+  letter-spacing: 2px;
   font-weight: bold;
 }
 
@@ -98,8 +97,24 @@
   border-bottom: 2px solid white;
   transition: all 0.3s;
 }
+.active {
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 30px 0;
+  color: rgb(118, 118, 118);
+  letter-spacing: 1px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 14px !important;
+  border-bottom: 2px solid white;
+  transition: all 0.3s;
+  /* /////// */
+  border-bottom: 4px solid var(--main-purple) !important;
+  color: var(--main-purple) !important;
+}
 .navbar_menu a:hover {
-  border-bottom: 2px solid var(--main-purple);
+  border-bottom: 4px solid var(--main-purple);
   color: var(--main-purple);
 }
 .home_icon {

@@ -24,6 +24,12 @@
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  transition: all 0.4s;
+  opacity: 0;
+}
+
+.home_main_img:hover > .img_btns {
+  opacity: 1;
 }
 .img_btns button {
   width: 42px;

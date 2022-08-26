@@ -7,14 +7,16 @@ function Home() {
   const [imgIndex, setImgIndex] = useState(0);
 
   const incrementImgIndex = () => {
-    // if (imgIndex >= images.length + 1) {
-    //   return;
-    // }
+    if (imgIndex > images.length - 2) {
+      setImgIndex(0);
+      return;
+    }
     setImgIndex(imgIndex + 1);
     console.log(imgIndex);
   };
   const decrementImgIndex = () => {
     if (imgIndex <= 0) {
+      setImgIndex(images.length - 1);
       return;
     }
     setImgIndex(imgIndex - 1);
