@@ -41,7 +41,6 @@ function Navbar() {
     dispatch(setActiveMenuLink(e.target.innerText));
   };
 
-  console.log(activeMenuLink.payload);
   const openCartModalHandler = () => {
     dispatch(openModalPermanently());
   };
@@ -55,13 +54,16 @@ function Navbar() {
   };
 
   return (
-    <nav className={classes.navbar}>
+    <nav id='navbar' className={classes.navbar}>
       {isModalOpen && <CartModal />}
       <Card className={classes.navbar_card}>
         <div className={classes.burger_menu} onClick={toggleMenuHandler}>
           <MenuIcon className={classes.burger_menu_icon} />
         </div>
-        <Link to='/' className={classes.logo}>
+        <Link
+          to='/'
+          className={classes.logo}
+          onClick={() => dispatch(setActiveMenuLink(""))}>
           Shopper
         </Link>
         <div className={classes.navbar_and_cart_wrapper}>

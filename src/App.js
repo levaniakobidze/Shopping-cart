@@ -5,12 +5,13 @@ import ProductsList from "./pages/productsList/ProductsList";
 import Cart from "./pages/cart/Cart";
 import Navbar from "./components/Navbar/Navbar";
 import ProductDetails from "./pages/productDetails/ProductDetails";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { calculate } from "./redux/slices/cartSlice";
 import Home from "./pages/home/Home";
 import { closeModal } from "./redux/slices/cartModalSlice";
 import { ToastContainer } from "react-toastify";
+import SlideUp from "./components/SlideUp/SlideUp";
 
 function App() {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ function App() {
       <Router>
         <ToastContainer />
         <Navbar />
+        <SlideUp />
         <Routes>
           <Route path={"/"} element={<Home />} />
           <Route path={"/list/:items"} element={<ProductsList />} />

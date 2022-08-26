@@ -1,0 +1,34 @@
+.slide_up {
+  position: fixed;
+  right: 0%;
+  top: 90%;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--main-purple);
+  color: var(--main-white);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000000;
+}
+
+.slide_up_active {
+  position: fixed;
+  right: 0%;
+  top: 90%;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: grey;
+  color: var(--main-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000000;
+  transition: all 0.3s;
+}
+
+.slide_up_active:hover {
+  background-color: var(--main-purple);
+}

@@ -5,6 +5,9 @@
   --main-purple-light: rgb(165, 14, 211);
   --main-black: #000;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
