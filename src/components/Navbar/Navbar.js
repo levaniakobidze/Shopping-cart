@@ -62,7 +62,7 @@ function Navbar() {
           <MenuIcon className={classes.burger_menu_icon} />
         </div>
         <Link to='/' className={classes.logo}>
-          Tech Shop
+          Shopper
         </Link>
         <div className={classes.navbar_and_cart_wrapper}>
           <ul

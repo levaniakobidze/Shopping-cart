@@ -6,6 +6,7 @@ import {
   increaseAmount,
   decreaseAmount,
 } from "../../redux/slices/cartSlice";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 function CartItem({ img, id, title, price, amount }) {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ function CartItem({ img, id, title, price, amount }) {
       <p className={classes.price}>${price}</p>
 
       <button className={classes.remove_btn} onClick={() => removeFromCart(id)}>
-        REMOVE
+        <DeleteIcon />
       </button>
     </section>
   );

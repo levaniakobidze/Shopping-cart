@@ -60,7 +60,7 @@
     height: 20vh !important;
   }
 }
-@media screen and (max-width: 787px) {
+@media screen and (max-width: 820px) {
   .productListing_card {
     display: flex;
     flex-direction: column;

@@ -33,7 +33,6 @@
 .logo {
   padding: 10px 10px;
   margin-right: 1px;
-  border-bottom: 2px solid black;
   color: var(--main-purple);
   text-decoration: none;
   display: flex;

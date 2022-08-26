@@ -17,6 +17,7 @@
 .cart_item_title {
   width: 210px;
   font-size: 15px;
+  margin-left: 5px;
   /* letter-spacing: 2px; */
   color: rgb(58, 58, 58);
 }
@@ -28,6 +29,7 @@
   align-items: center;
   border: 1px solid rgb(240, 240, 240);
   padding: 10px 10px;
+  margin: 0 1px;
 }
 .increase,
 .decrease {
@@ -44,22 +46,100 @@
   font-size: 16px;
 }
 .remove_btn {
-  width: 120px;
+  width: 40px;
   height: 40px;
   /* border: 1px solid var(--main-purple); */
   outline: 0;
   background-color: var(--main-white);
   color: var(--main-purple);
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
   cursor: pointer;
   transition: all 0.3s;
   border: 0;
-  box-shadow: 0 0 10px 1px rgb(232, 232, 232);
+  /* box-shadow: 0 0 10px 1px rgb(232, 232, 232); */
 }
 .remove_btn:hover {
   background-color: var(--main-purple);
   color: var(--main-white);
+}
+
+@media screen and (max-width: 1069px) {
+  .cart_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 10px !important;
+  }
+  .cart_item_img {
+    width: 60px !important;
+    height: auto !important;
+  }
+
+  .cart_item_img img {
+    width: 100%;
+  }
+  .cart_item_title {
+    width: 180px;
+    font-size: 13px;
+    color: rgb(58, 58, 58);
+  }
+  .btns_cont {
+    width: 80px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(240, 240, 240);
+    padding: 10px 10px;
+  }
+  .increase,
+  .decrease {
+    border: 0;
+    outline: 0;
+    background-color: var(--main-white);
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(136, 136, 136);
+  }
+  .price {
+    color: rgb(136, 136, 136);
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .btns_cont {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 432px) {
+  .btns_cont {
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 358px) {
+  .cart_item_title {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 314px) {
+  .cart_item_title {
+    width: 150px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 278px) {
+  .cart_item_title {
+    width: 130px;
+    font-size: 12px;
+  }
 }

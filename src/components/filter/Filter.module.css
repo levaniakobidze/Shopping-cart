@@ -43,7 +43,7 @@
   display: block;
 }
 .banner img {
-  height: 20vh;
+  width: 100%;
 }
 .title_and_burger {
   display: flex;
@@ -200,7 +200,7 @@
 }
 
 /* //////////////////////////////// */
-@media screen and (max-width: 787px) {
+@media screen and (max-width: 820px) {
   .filter {
     width: 100% !important;
     border-radius: 8px;
