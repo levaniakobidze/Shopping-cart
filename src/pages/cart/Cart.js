@@ -17,6 +17,12 @@ function Cart() {
     <section className={classes.cart}>
       <Card className={classes.cart_card}>
         <div className={classes.cart_items_wrapper}>
+          <div className={classes.cart_header}>
+            <p>Image</p>
+            <p>Product Name</p>
+            <p>Qty.</p>
+            <p>Price</p>
+          </div>
           <div className={classes.list}>
             {cartItems.length < 1 && (
               <h1 className={classes.empty}>Cart is empty</h1>

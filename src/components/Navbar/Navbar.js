@@ -12,7 +12,12 @@ import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import TvIcon from "@mui/icons-material/Tv";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { phonesList, tvList, laptopsList } from "../../cartItems";
+import {
+  phonesList,
+  tvList,
+  laptopsList,
+  headphonesList,
+} from "../../cartItems";
 import { addItemsList, closeFilter } from "../../redux/slices/cartSlice";
 import { openModalPermanently } from "../../redux/slices/cartModalSlice";
 import {
@@ -37,6 +42,9 @@ function Navbar() {
     }
     if (e.target.innerText.toLowerCase() === "laptops") {
       dispatch(addItemsList(laptopsList));
+    }
+    if (e.target.innerText.toLowerCase() === "headphones") {
+      dispatch(addItemsList(headphonesList));
     }
     dispatch(setActiveMenuLink(e.target.innerText));
   };
@@ -113,7 +121,7 @@ function Navbar() {
               Laptops
             </Link>
             <Link
-              to={"/list"}
+              to={"/list/headphones"}
               onClick={addItemsListHandler}
               className={
                 activeMenuLink.payload === "Headphones"

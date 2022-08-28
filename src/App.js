@@ -12,10 +12,12 @@ import Home from "./pages/home/Home";
 import { closeModal } from "./redux/slices/cartModalSlice";
 import { ToastContainer } from "react-toastify";
 import SlideUp from "./components/SlideUp/SlideUp";
+import Cookies from "./components/Cookies/Cookies";
 
 function App() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
+  const [showCookies, setShowCookies] = useState(false);
 
   useEffect(() => {
     dispatch(calculate());
@@ -23,6 +25,7 @@ function App() {
 
   useEffect(() => {
     dispatch(closeModal());
+    setShowCookies(true);
   }, []);
 
   window.addEventListener("click", (e) => {
@@ -35,6 +38,7 @@ function App() {
         <ToastContainer />
         <Navbar />
         <SlideUp />
+        {showCookies && <Cookies setShowCookies={setShowCookies} />}
         <Routes>
           <Route path={"/"} element={<Home />} />
           <Route path={"/list/:items"} element={<ProductsList />} />
