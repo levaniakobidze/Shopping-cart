@@ -1531,3 +1531,100 @@ export const headphonesList = [
     amount: 1,
   },
 ];
+
+export const camerasList = [
+  {
+    id: "dr23wergrt5545trh3weffrefPwwgweweT2",
+    title: "Canon EOS 2000D EF-S 18-55 IS II KIT Black",
+    brand: "Canon",
+    price: "599.99",
+    img: "https://img.zoommer.ge/zoommer-images/thumbs/0092049_canon-eos-2000d-ef-s-18-55-is-ii-kit-black_220.png",
+    listImg: [
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092050_canon-eos-2000d-ef-s-18-55-is-ii-kit-black_220.png",
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092051_canon-eos-2000d-ef-s-18-55-is-ii-kit-black_220.png",
+    ],
+    spec: {
+      rate: "144 Hz",
+      type: "intel Core i5",
+      dpType: "IPS",
+      ssd: "pCle nVme",
+    },
+    amount: 1,
+  },
+  {
+    id: "dr23wergrt5545trh3weffrefrgerghtPwwgweweT2",
+    title: "Canon EOS 4000D EF-S 18-55 III KIT Black",
+    brand: "Canon",
+    price: "509.99",
+    img: "https://img.zoommer.ge/zoommer-images/thumbs/0092049_canon-eos-2000d-ef-s-18-55-is-ii-kit-black_220.png",
+    listImg: [
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092050_canon-eos-2000d-ef-s-18-55-is-ii-kit-black_220.png",
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092051_canon-eos-2000d-ef-s-18-55-is-ii-kit-black_220.png",
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092055_canon-eos-4000d-ef-s-18-55-iii-kit-black_220.png",
+    ],
+    spec: {
+      rate: "144 Hz",
+      type: "intel Core i5",
+      dpType: "IPS",
+      ssd: "pCle nVme",
+    },
+    amount: 1,
+  },
+  {
+    id: "dr23wergrt554asferferg5trh3weffrefPwwgweweT2",
+    title: "Canon EOS 4000D EF-S 18-55 III KIT Black",
+    brand: "Canon",
+    price: "839.99",
+    img: "https://img.zoommer.ge/zoommer-images/thumbs/0149973_canon-eos-m200-ef-m-15-45-is-stm-black_220.jpeg",
+    listImg: [
+      "https://img.zoommer.ge/zoommer-images/thumbs/0149974_canon-eos-m200-ef-m-15-45-is-stm-black_220.jpeg",
+      "https://img.zoommer.ge/zoommer-images/thumbs/0149975_canon-eos-m200-ef-m-15-45-is-stm-black_220.jpeg",
+      "https://img.zoommer.ge/zoommer-images/thumbs/0149976_canon-eos-m200-ef-m-15-45-is-stm-black_220.jpeg",
+    ],
+    spec: {
+      rate: "144 Hz",
+      type: "intel Core i5",
+      dpType: "IPS",
+      ssd: "pCle nVme",
+    },
+    amount: 1,
+  },
+  {
+    id: "dr23wergrt554tjyjtyjtyreffrefPwwgweweT2",
+    title: "Canon EOS 5D Mark IV Body Black",
+    brand: "Canon",
+    price: "3469.99",
+    img: "https://img.zoommer.ge/zoommer-images/thumbs/0092287_canon-eos-5d-mark-iv-body-black_220.png",
+    listImg: [
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092288_canon-eos-5d-mark-iv-body-black_220.png ",
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092289_canon-eos-5d-mark-iv-body-black_220.png",
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092290_canon-eos-5d-mark-iv-body-black_220.png",
+    ],
+    spec: {
+      rate: "144 Hz",
+      type: "intel Core i5",
+      dpType: "IPS",
+      ssd: "pCle nVme",
+    },
+    amount: 1,
+  },
+  {
+    id: "dr23wergrt554tjyjtyjtyefsdfewsxcfvfPwwgweweT2",
+    title: "Nikon D750 Body Black",
+    brand: "Nikon",
+    price: "839.99",
+    img: "https://img.zoommer.ge/zoommer-images/thumbs/0092067_nikon-d750-body-black_220.png",
+    listImg: [
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092068_nikon-d750-body-black_220.png ",
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092289_canon-eos-5d-mark-iv-body-black_220.png",
+      "https://img.zoommer.ge/zoommer-images/thumbs/0092069_nikon-d750-body-black_220.png",
+    ],
+    spec: {
+      rate: "144 Hz",
+      type: "intel Core i5",
+      dpType: "IPS",
+      ssd: "pCle nVme",
+    },
+    amount: 1,
+  },
+];

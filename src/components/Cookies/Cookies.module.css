@@ -9,6 +9,7 @@
   height: 100px;
   z-index: 1000000;
   padding: 15px 20px;
+  backdrop-filter: blur(2px);
 }
 .close_cookies {
   position: absolute;
@@ -45,6 +46,8 @@
   font-size: 14px;
   width: 80%;
   margin: 10px 0;
+  /* padding-bottom: 30px; */
+  z-index: 1000000;
 }
 .ok_btn {
   background-color: var(--main-purple);
@@ -94,7 +97,10 @@
 @media screen and (max-width: 404px) {
   .cookies {
     width: 90%;
-    height: 120px;
+    height: auto;
+  }
+  .cookies_title {
+    display: none;
   }
   .cookies_text {
     margin-top: 5px;

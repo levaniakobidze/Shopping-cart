@@ -17,6 +17,7 @@ import {
   tvList,
   laptopsList,
   headphonesList,
+  camerasList,
 } from "../../cartItems";
 import { addItemsList, closeFilter } from "../../redux/slices/cartSlice";
 import { openModalPermanently } from "../../redux/slices/cartModalSlice";
@@ -45,6 +46,9 @@ function Navbar() {
     }
     if (e.target.innerText.toLowerCase() === "headphones") {
       dispatch(addItemsList(headphonesList));
+    }
+    if (e.target.innerText.toLowerCase() === "cameras") {
+      dispatch(addItemsList(camerasList));
     }
     dispatch(setActiveMenuLink(e.target.innerText));
   };
@@ -132,7 +136,7 @@ function Navbar() {
               Headphones
             </Link>
             <Link
-              to={"/list"}
+              to={"/list/cameras"}
               onClick={addItemsListHandler}
               className={
                 activeMenuLink.payload === "Cameras"

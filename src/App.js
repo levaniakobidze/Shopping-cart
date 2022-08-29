@@ -25,12 +25,12 @@ function App() {
 
   useEffect(() => {
     dispatch(closeModal());
-    setShowCookies(false);
+    setShowCookies(true);
   }, []);
 
-  window.addEventListener("click", (e) => {
-    e.preventDefault();
-  });
+  // window.addEventListener("click", (e) => {
+  //   e.preventDefault();
+  // });
 
   return (
     <div className='App'>

@@ -85,14 +85,28 @@
   letter-spacing: 2px;
   padding: 10px 0;
 }
-.sub_tota_cont {
-  text-align: right;
-  padding: 20px 10px;
+.totals {
+  display: flex;
+  flex-direction: column;
+}
+.total {
+  color: rgb(129, 129, 129);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid rgb(224, 224, 224);
 }
 .sub_total {
-  color: rgb(49, 49, 49);
+  color: rgb(129, 129, 129);
   font-weight: bold;
-  margin-right: 10px;
+  display: flex;
+  padding: 25px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub_total_num {
+  color: rgb(129, 92, 160);
 }
 .check_out {
   width: 100%;

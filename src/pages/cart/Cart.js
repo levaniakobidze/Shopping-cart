@@ -41,9 +41,19 @@ function Cart() {
         <div className={classes.total_wrapper}>
           <div className={classes.total_cont}>
             <h3 className={classes.total_title}>Total</h3>
-            <div className={classes.sub_tota_cont}>
-              <span className={classes.sub_total}>sub-total:</span> $
-              {total.toString().substr(0, 10)}
+            <div className={classes.totals}>
+              <span className={classes.total}>
+                <span>total</span>
+                <span className={classes.total_num}>
+                  ${total.toString().substr(0, 10)}
+                </span>
+              </span>
+              <span className={classes.sub_total}>
+                <span>sub-total</span>
+                <span className={classes.sub_total_num}>
+                  ${total.toString().substr(0, 10)}
+                </span>
+              </span>{" "}
             </div>
             <button className={classes.check_out}>Check out</button>
           </div>

@@ -56,7 +56,7 @@ function CartModal({ isModalAcitve }) {
                 <span
                   className={classes.remove}
                   onClick={() => removeHandler(item.id)}>
-                  X
+                  x
                 </span>
                 <div className={classes.cart_modal_item_img}>
                   <img src={item.img} alt={item.title} />
