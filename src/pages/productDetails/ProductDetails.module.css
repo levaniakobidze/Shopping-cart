@@ -93,7 +93,7 @@
   width: 100%;
 }
 .product_info {
-  width: 400px;
+  flex: 1;
   padding: 10px 20px;
 }
 
@@ -220,7 +220,7 @@
     justify-content: center;
   }
   .product_info {
-    width: 250px;
+    /* width: 250px; */
   }
 }
 
@@ -267,5 +267,11 @@
 @media screen and (max-width: 385px) {
   .product_imgs {
     width: 250px;
+  }
+}
+
+@media screen and (max-width: 348px) {
+  .product_imgs {
+    width: 230px;
   }
 }

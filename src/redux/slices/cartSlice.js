@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
 let toastObj = {
-  position: toast.POSITION.BOTTOM_CENTER,
+  position: toast.POSITION.BOTTOM_RIGHT,
   autoClose: 600,
   hideProgressBar: false,
   closeOnClick: true,

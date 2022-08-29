@@ -6,7 +6,6 @@
 .productListing_card {
   display: flex;
   width: 81rem;
-
   justify-content: space-between;
 }
 
@@ -31,6 +30,23 @@
 }
 
 .banner img {
+  border-radius: 10px;
+  height: 30vh;
+  object-fit: cover;
+  padding: 10px 10px;
+}
+
+.banner_hide {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--main-white);
+  justify-content: space-between;
+  /* background-color: red; */
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgb(211, 211, 211);
+}
+.banner_hide img {
   border-radius: 10px;
   height: 30vh;
   object-fit: cover;
@@ -65,6 +81,13 @@
   .productListing_card {
     display: flex;
     flex-direction: column;
+  }
+
+  .banner_hide {
+    display: none !important;
+  }
+  .banner_hide img {
+    display: none !important;
   }
 }
 @media screen and (max-width: 787px) {

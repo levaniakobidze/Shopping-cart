@@ -66,6 +66,7 @@
   justify-content: left;
   color: var(--main-purple);
   font-weight: bold;
+  font-size: 13px;
 }
 .add_btn {
   width: 35px;
@@ -107,7 +108,7 @@
     background-color: var(--main-white);
   }
   .product_wrapper {
-    margin-top: 10px !important;
+    margin-top: 5px !important;
   }
 }
 

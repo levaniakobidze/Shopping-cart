@@ -62,3 +62,70 @@
 .ok_btn:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
+
+@media screen and (max-width: 732px) {
+  .cookies {
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 732px) {
+  .cookies {
+    height: 120px;
+  }
+  .cookies_text {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 486px) {
+  .cookies {
+    height: 120px;
+  }
+  .cookies_text {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .ok_btn {
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 404px) {
+  .cookies {
+    width: 90%;
+    height: 120px;
+  }
+  .cookies_text {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .ok_btn {
+    margin-left: 5px;
+    width: 60px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .cookies {
+    width: 90%;
+    height: 130px;
+  }
+  .cookies_text {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .ok_btn {
+    margin-left: 5px;
+    width: 60px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 310px) {
+  .cookies_title {
+    font-size: 14px;
+  }
+  .cookies_text {
+    font-size: 12px;
+  }
+}

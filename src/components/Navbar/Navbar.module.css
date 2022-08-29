@@ -60,8 +60,8 @@
 }
 
 .cart_logo {
-  color: var(--main-purple);
-  font-size: 30px !important;
+  color: rgb(73, 73, 73);
+  font-size: 25px !important;
 }
 
 .amount {
@@ -72,6 +72,7 @@
   top: 1%;
   right: 0%;
   color: var(--main-white);
+  font-size: 10px;
   font-weight: bold;
 }
 .navbar_menu {
@@ -159,6 +160,7 @@
     display: flex;
     width: 100%;
     padding: 20px 25px;
+    color: grey;
   }
   .navbar_card {
     height: 60px;

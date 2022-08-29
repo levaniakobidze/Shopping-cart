@@ -1,19 +1,15 @@
 .filter {
   width: 300px;
-  background-color: var(--main-white);
   margin-top: 20px;
   transition: all 0.3s;
-  border-radius: 10px;
-  padding: 10px 10px;
   height: 100%;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 .filter_close {
   flex: 0;
   width: 45px !important;
   margin-top: 20px;
   transition: all 0.3s;
-  padding: 10px 10px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -37,19 +33,27 @@
 .filter_wrapper {
   background-color: var(--main-white);
   position: relative;
+  padding: 10px 0;
+  position: sticky;
+  top: 15%;
+  border-radius: 10px;
+  transition: all 0.5s;
 }
 .banner {
   width: 100%;
   display: block;
 }
+
 .banner img {
   width: 100%;
 }
+
 .title_and_burger {
   display: flex;
   align-items: center;
   position: absolute;
-  top: 0;
+  top: 1%;
+  left: 2%;
 }
 .title {
   margin-left: 13px;
@@ -69,7 +73,7 @@
   transition: all 0.1s;
   position: sticky;
   top: 0%;
-  margin-top: 35px;
+  margin-top: 5px;
 }
 .filters_wrapper_hide {
   display: hidden;
@@ -83,7 +87,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 .search_filter input {
   border: 0;
@@ -104,11 +108,11 @@
   letter-spacing: 2px;
 }
 .filter_brands {
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   justify-content: left;
-  margin-left: 40px;
+  margin-left: 25px;
 }
 .filter_brands_title {
   color: var(--main-black);
@@ -122,20 +126,24 @@
   list-style: none;
   width: 90%;
   margin: 0px 0px;
-  color: var(--main-purple);
+  color: rgb(66, 66, 66);
+  font-size: 13px;
+  letter-spacing: 1px;
   cursor: pointer;
   padding: 7px 0;
   transition: all 0.3s;
 }
 .brands_list li:hover {
-  border-bottom: 1px solid rgb(231, 231, 231);
+  border-bottom: 1px solid rgb(241, 241, 241);
+  color: var(--main-purple);
 }
 .filter_price {
-  margin-top: 30px;
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   justify-content: left;
-  margin-left: 40px;
+  /* background-color: red; */
+  margin-left: 25px;
 }
 .filter_price_title {
   color: var(--main-black);
@@ -147,9 +155,11 @@
 }
 .price_from,
 .price_to {
+  border-radius: 5px;
   margin-top: 10px;
-  width: 60px;
-  height: 30px;
+  width: 70px;
+  padding: 8px 0;
+  margin-bottom: 9px;
   margin-right: 5px;
   padding-left: 10px;
   border: 0;
@@ -179,6 +189,9 @@
   width: 40px;
   height: 30px;
   cursor: pointer;
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 .restart_btn {
   outline: 0;
@@ -191,6 +204,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 .restart_icon {
   font-size: 18px;
@@ -204,16 +218,28 @@
   .filter {
     width: 100% !important;
     border-radius: 8px;
-    padding: 20px 20px !important;
-    height: 330px;
+    height: auto;
+    transition: all 0.3s;
+    height: 310px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-white);
+  }
+
+  .filter_wrapper {
+    width: 100%;
+    position: static;
+    padding: 10px 10px;
+    transition: all 0.3s;
   }
   .banner {
-    background-color: red;
-    display: none;
+    display: none !important;
   }
   .banner img {
     border-radius: 30px !important;
     display: none;
+    padding: 200px;
   }
   .filters_wrapper {
     width: 100% !important;
@@ -226,6 +252,7 @@
     width: 100% !important;
     height: 45px;
     background-color: var(--main-white);
+    border-radius: 10px;
     margin-top: 20px;
     transition: all 0.3s;
     display: flex;
@@ -245,6 +272,11 @@
   }
   .title {
     display: none;
+  }
+
+  .search_filter {
+    justify-content: left;
+    padding-left: 10px;
   }
   .filter_brands,
   .filter_price {

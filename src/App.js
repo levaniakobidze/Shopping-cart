@@ -25,7 +25,7 @@ function App() {
 
   useEffect(() => {
     dispatch(closeModal());
-    setShowCookies(true);
+    setShowCookies(false);
   }, []);
 
   window.addEventListener("click", (e) => {

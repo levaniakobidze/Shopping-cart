@@ -5,6 +5,7 @@
   align-items: center;
   margin-top: 10px;
   padding: 0 20px;
+  border-bottom: 1px solid rgb(230, 230, 230);
 }
 .cart_item_img {
   width: 100px;

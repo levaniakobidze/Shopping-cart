@@ -25,7 +25,7 @@ function ProductsList() {
       <Card className={classes.productListing_card}>
         <Filter />
         <div className={classes.list_wrapper}>
-          <div className={classes.banner}>
+          <div className={!filterActive ? classes.banner : classes.banner_hide}>
             <img src={images[1]} alt='' className={classes.img1} />
             <img
               src={images[0]}
