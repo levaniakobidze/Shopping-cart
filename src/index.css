@@ -5,6 +5,9 @@
   --main-purple-light: rgb(165, 14, 211);
   --main-black: #000;
 }
+.swiper-pagination-bullet-active {
+  background-color: var(--main-purple) !important;
+}
 html {
   scroll-behavior: smooth;
 }

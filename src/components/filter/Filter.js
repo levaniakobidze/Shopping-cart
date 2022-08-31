@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import classes from "./Filter.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
-import { images } from "../../pages/home/homeImgs";
+import { images } from "../HomeSwiper/homeImgs";
 import {
   filterWithSearch,
   filterBrands,

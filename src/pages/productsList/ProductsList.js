@@ -6,7 +6,7 @@ import Filter from "../../components/filter/Filter";
 import Card from "../../components/Card/Card";
 import { addItemsList } from "../../redux/slices/cartSlice";
 import { phonesList } from "../../cartItems";
-import { images } from "../home/homeImgs";
+import { images } from "../../components/HomeSwiper/homeImgs";
 
 function ProductsList() {
   const items = useSelector((state) => state.cart.listItems);
