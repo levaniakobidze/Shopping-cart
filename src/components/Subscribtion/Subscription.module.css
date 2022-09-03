@@ -1,7 +1,7 @@
 .subscribtion_cont {
   width: 100%;
   background-color: var(--main-purple);
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .subscribtion_card {
   display: flex;
@@ -45,14 +45,23 @@
   margin-top: 5px;
 }
 
+.links {
+  display: flex;
+}
 .link {
   border: 1px solid rgb(170, 170, 170);
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .link_icon {
-  font-size: 16px;
+  font-size: 23px;
   color: var(--main-white);
 }
 
@@ -62,6 +71,10 @@
 }
 .creator_icon {
   color: var(--main-white);
+  font-size: 38px !important;
+  border-right: 1px solid var(--main-white);
+  margin-right: 5px;
+  padding-right: 5px;
 }
 .creator_text {
   display: flex;
@@ -96,9 +109,28 @@
     justify-content: space-between;
   }
   .subscribe_form {
+    width: 250px;
+  }
+  .links_cont {
+    width: 45%;
+  }
+  .creator_icon {
+    font-size: 26px;
+    border-radius: 50%;
+  }
+  .coded_and_designed {
+    font-size: 13px;
+  }
+  .creator_text a {
+    font-size: 13px;
+  }
+}
+
+@media all and (min-width: 780px) {
+  .subscribe_form {
     width: 400px;
   }
   .links_cont {
-    width: 50%;
+    width: 40%;
   }
 }

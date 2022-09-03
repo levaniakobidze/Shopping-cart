@@ -14,11 +14,10 @@ const Subscription = () => {
     <div className={classes.subscribtion_cont}>
       <Card className={classes.subscribtion_card}>
         <form
-          action="#"
+          action='#'
           onSubmit={submitHandler}
-          className={classes.subscribe_form}
-        >
-          <input type="email" placeholder="Enter your email " />
+          className={classes.subscribe_form}>
+          <input type='email' placeholder='Enter your email ' />
           <button>
             <SendIcon />
           </button>
@@ -28,16 +27,14 @@ const Subscription = () => {
         <div className={classes.links_cont}>
           <div className={classes.links}>
             <a
-              href="https://github.com/levaniakobidze"
-              className={classes.link}
-            >
+              href='https://github.com/levaniakobidze'
+              className={classes.link}>
               <GitHubIcon className={classes.link_icon} />
             </a>
             <a
-              href="https://www.linkedin.com/in/levan-iakobidze-b0b60923b/"
+              href='https://www.linkedin.com/in/levan-iakobidze-b0b60923b/'
               className={classes.link}
-              style={{ marginLeft: "5px" }}
-            >
+              style={{ marginLeft: "5px" }}>
               <LinkedInIcon className={classes.link_icon} />
             </a>
           </div>
@@ -48,9 +45,9 @@ const Subscription = () => {
               <span className={classes.coded_and_designed}>
                 Coded and Designed by:
               </span>
-              <a href="https://www.linkedin.com/in/levan-iakobidze-b0b60923b/">
+              <a href='https://www.linkedin.com/in/levan-iakobidze-b0b60923b/'>
                 Levan iakobidze
-                <img src="https://zoommer.ge/images/flags/ge.png" alt="flag" />
+                <img src='https://zoommer.ge/images/flags/ge.png' alt='flag' />
               </a>
             </div>
           </div>

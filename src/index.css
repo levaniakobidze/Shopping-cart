@@ -1,7 +1,7 @@
 :root {
   --main-white: rgb(255, 255, 255);
   --main-grey: rgb(238, 238, 238);
-  --main-purple: rgb(126, 3, 163);
+  --main-purple: rgb(195, 0, 255);
   --main-purple-light: rgb(165, 14, 211);
   --main-black: #000;
 }
@@ -20,10 +20,10 @@ html {
 
 body {
   margin: 0;
+  background-color: var(--main-grey);
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--main-grey);
 }
 
 code {
