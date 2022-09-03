@@ -1,6 +1,7 @@
 .productListing {
   display: flex;
   background-color: var(--main-grey);
+  margin-bottom: 20px;
 }
 
 .productListing_card {

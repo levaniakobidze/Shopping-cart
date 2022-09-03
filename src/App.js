@@ -1,4 +1,4 @@
-import "./App.css";
+                                                                                                                                                              import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductsList from "./pages/productsList/ProductsList";
@@ -13,6 +13,7 @@ import { closeModal } from "./redux/slices/cartModalSlice";
 import { ToastContainer } from "react-toastify";
 import SlideUp from "./components/SlideUp/SlideUp";
 import Cookies from "./components/Cookies/Cookies";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -28,9 +29,9 @@ function App() {
     setShowCookies(true);
   }, []);
 
-  // window.addEventListener("click", (e) => {
-  //   e.preventDefault();
-  // });
+  window.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
 
   return (
     <div className='App'>
@@ -45,6 +46,7 @@ function App() {
           <Route path={"/cart"} element={<Cart />} />
           <Route path={"/details/:Id"} element={<ProductDetails />} />
         </Routes>
+        <Footer />  
       </Router>
     </div>
   );

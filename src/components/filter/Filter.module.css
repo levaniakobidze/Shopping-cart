@@ -4,17 +4,21 @@
   transition: all 0.3s;
   height: 100%;
   padding-bottom: 20px;
+  margin-bottom: 20px;
+
 }
 .filter_close {
   flex: 0;
   width: 45px !important;
   margin-top: 20px;
   transition: all 0.3s;
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   background-color: var(--main-white);
   position: relative;
+  margin-bottom: 20px;
+
 }
 .filter_close > .filter_wrapper > .title_and_burger {
   display: flex;

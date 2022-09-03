@@ -2,6 +2,8 @@
   width: 100%;
   background-color: var(--main-grey);
   min-height: 100vh;
+  margin-bottom: 20px;
+
 }
 
 .details_card {
@@ -219,9 +221,7 @@
   .details {
     justify-content: center;
   }
-  .product_info {
-    /* width: 250px; */
-  }
+
 }
 
 @media screen and (max-width: 1259px) {
