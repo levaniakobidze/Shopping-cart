@@ -36,7 +36,6 @@ function Product({ id, amount, img, listImg, title, price }) {
       </div>
       <Link to={`/details/${id}`} className={classes.product}>
         <div className={classes.product_img}>
-          {/* <img src={img} alt={title} /> */}
           <Swiper
             spaceBetween={50}
             slidesPerView={1}

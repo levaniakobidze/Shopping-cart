@@ -12,10 +12,32 @@
 
 .home_main_img img {
   width: 100%;
-  height: 80vh;
   object-fit: cover;
   animation: imgSlide 2s forwards;
   border-radius: 10px;
+}
+.top_offers {
+  width: 100%;
+  padding: 40px 0;
+  border-radius: 10px;
+  background-color: var(--main-purple);
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.top_offers_header {
+  background-color: var(--main-white);
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 20px;
+  margin: 20px 20px;
+  border-radius: 10px;
+}
+.top_offers_list_cont {
+  padding: 0 20px;
 }
 
 /* ////// ANIMATIONS  /////// */

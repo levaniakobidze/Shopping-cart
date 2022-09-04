@@ -3,7 +3,6 @@ import Card from "../Card/Card";
 import Subscription from "../Subscribtion/Subscription";
 import classes from "./Footer.module.css";
 import EmailIcon from "@mui/icons-material/Email";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { Phone } from "@mui/icons-material";
 
 const Footer = () => {

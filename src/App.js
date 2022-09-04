@@ -1,4 +1,4 @@
-                                                                                                                                                              import "./App.css";
+import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductsList from "./pages/productsList/ProductsList";
@@ -14,11 +14,17 @@ import { ToastContainer } from "react-toastify";
 import SlideUp from "./components/SlideUp/SlideUp";
 import Cookies from "./components/Cookies/Cookies";
 import Footer from "./components/footer/Footer";
+import { useLocation } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
   const [showCookies, setShowCookies] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     dispatch(calculate());
@@ -35,19 +41,17 @@ function App() {
 
   return (
     <div className='App'>
-      <Router>
-        <ToastContainer />
-        <Navbar />
-        <SlideUp />
-        {showCookies && <Cookies setShowCookies={setShowCookies} />}
-        <Routes>
-          <Route path={"/"} element={<Home />} />
-          <Route path={"/list/:items"} element={<ProductsList />} />
-          <Route path={"/cart"} element={<Cart />} />
-          <Route path={"/details/:Id"} element={<ProductDetails />} />
-        </Routes>
-        <Footer />  
-      </Router>
+      <ToastContainer />
+      <Navbar />
+      <SlideUp />
+      {showCookies && <Cookies setShowCookies={setShowCookies} />}
+      <Routes>
+        <Route path={"/"} element={<Home />} />
+        <Route path={"/list/:items"} element={<ProductsList />} />
+        <Route path={"/cart"} element={<Cart />} />
+        <Route path={"/details/:Id"} element={<ProductDetails />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
