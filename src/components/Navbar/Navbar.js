@@ -10,6 +10,7 @@ import LaptopChromebookRoundedIcon from "@mui/icons-material/LaptopChromebookRou
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import TvIcon from "@mui/icons-material/Tv";
+import SlideUp from "../SlideUp/SlideUp";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -88,6 +89,7 @@ function Navbar() {
       }>
       {isModalOpen && <CartModal />}
       <Card className={classes.navbar_card}>
+        <SlideUp />
         <div className={classes.burger_menu} onClick={toggleMenuHandler}>
           <MenuIcon className={classes.burger_menu_icon} />
         </div>

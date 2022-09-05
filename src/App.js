@@ -11,7 +11,6 @@ import { calculate } from "./redux/slices/cartSlice";
 import Home from "./pages/home/Home";
 import { closeModal } from "./redux/slices/cartModalSlice";
 import { ToastContainer } from "react-toastify";
-import SlideUp from "./components/SlideUp/SlideUp";
 import Cookies from "./components/Cookies/Cookies";
 import Footer from "./components/footer/Footer";
 import { useLocation } from "react-router-dom";
@@ -35,15 +34,11 @@ function App() {
     setShowCookies(true);
   }, []);
 
-  window.addEventListener("click", (e) => {
-    e.preventDefault();
-  });
-
   return (
     <div className='App'>
       <ToastContainer />
       <Navbar />
-      <SlideUp />
+
       {showCookies && <Cookies setShowCookies={setShowCookies} />}
       <Routes>
         <Route path={"/"} element={<Home />} />
