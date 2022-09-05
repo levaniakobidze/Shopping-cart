@@ -169,6 +169,7 @@
     width: 100%;
     padding: 20px 25px;
     color: grey;
+    border-bottom: 1px solid rgb(210, 210, 210);
   }
   .navbar_card {
     height: 100%;
@@ -197,13 +198,13 @@
     position: fixed;
     top: 0%;
     left: 0%;
-    width: 100%;
+    width: 45%;
     background-color: var(--main-grey);
     height: 100vh;
     display: flex;
-    justify-content: top;
-    align-items: center;
+    justify-content: left;
     flex-direction: column;
+    box-shadow: 0 0 10px 1px grey;
     z-index: 111122222222222222222222222222222222222222222222222;
   }
   .navbar_menu a {
@@ -212,5 +213,13 @@
     display: inline-block;
     border: 0;
     padding: 20px 25px;
+    height: auto !important;
+    /* background-color: green; */
+    width: 100%;
+  }
+  .active {
+    border-bottom: 0 !important;
+    background-color: var(--main-purple) !important;
+    color: var(--main-white) !important;
   }
 }
