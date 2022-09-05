@@ -13,7 +13,6 @@
 .scroll_nav {
   background-color: var(--main-purple) !important;
   height: 50px;
-  /* border-bottom: 1px solid rgb(255, 255, 255); */
   box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
 }
 
