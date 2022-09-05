@@ -4,15 +4,24 @@
   top: 0;
   right: 0;
   background-color: var(--main-white);
-  /* border-bottom: 1px solid rgb(228, 228, 228);
-  box-shadow: 0px 0px 10px 1px rgb(148, 148, 148); */
+
   z-index: 1000;
+  height: 70px;
+  transition: all 0.2s;
+}
+
+.scroll_nav {
+  background-color: var(--main-purple) !important;
+  height: 50px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
 }
 
 .navbar_card {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
 .burger_menu {
@@ -42,12 +51,20 @@
   letter-spacing: 2px;
   font-weight: bold;
 }
+.on_scroll_logo {
+  color: var(--main-white) !important;
+}
 
 .navbar_and_cart_wrapper {
   display: flex;
   align-items: center;
   position: relative;
+  height: 100%;
 }
+.navbar_and_cart_wrapper_scroll > ul {
+  background-color: var(--main-white) !important;
+}
+
 .cart {
   padding: 0px 5px;
   cursor: pointer;
@@ -79,14 +96,16 @@
   display: flex;
   align-items: center;
   margin-right: 70px;
+  height: 100%;
 }
+
 .navbar_menu li {
   list-style: none;
 }
 
 .navbar_menu a {
   text-decoration: none;
-  margin: 0 1px;
+  height: 100% !important;
   padding: 30px 10px;
   color: rgb(118, 118, 118);
   letter-spacing: 1px;
@@ -96,21 +115,20 @@
   font-size: 14px !important;
   border-bottom: 2px solid white;
   transition: all 0.3s;
+  padding: 0 10px;
 }
 .active {
   text-decoration: none;
-  padding: 30px 0px;
   color: rgb(118, 118, 118);
   letter-spacing: 1px;
   font-weight: bold;
   display: flex;
   align-items: center;
   font-size: 14px !important;
-  border-bottom: 2px solid white;
+  height: 100%;
   transition: all 0.3s;
   /* /////// */
-  border-bottom: 4px solid var(--main-purple) !important;
-  color: var(--main-purple) !important;
+  border-bottom: 1px solid var(--main-purple) !important;
 }
 .navbar_menu a:hover {
   border-bottom: 4px solid var(--main-purple);
@@ -140,16 +158,6 @@
   padding-top: 10px;
 }
 
-.dropdown_menu_link {
-  text-decoration: none;
-  color: #fff;
-  width: 100% !important;
-  transition: all 0.3s;
-  padding: 10px 10px;
-  display: flex;
-  align-items: center;
-}
-
 .nav_drop_menu_icon {
   font-size: 15px !important;
   margin-right: 5px;
@@ -163,12 +171,13 @@
     color: grey;
   }
   .navbar_card {
-    height: 60px;
+    height: 100%;
   }
   .burger_menu {
     display: flex;
     align-items: center;
     margin-left: 10px;
+    color: rgb(65, 65, 65);
   }
   .navbar_menu {
     position: fixed;

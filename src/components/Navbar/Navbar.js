@@ -25,12 +25,15 @@ import {
   closeMenu,
   toggleMenu,
   setActiveMenuLink,
+  setScrollNav,
 } from "../../redux/slices/navbarSlice";
 
 function Navbar() {
   const { amount } = useSelector((state) => state.cart);
   const { isModalOpen } = useSelector((state) => state.modal);
-  const { activeMenu, activeMenuLink } = useSelector((state) => state.navMenu);
+  const { activeMenu, activeMenuLink, onScrollNav } = useSelector(
+    (state) => state.navMenu
+  );
 
   const dispatch = useDispatch();
 
@@ -65,8 +68,24 @@ function Navbar() {
     dispatch(closeFilter());
   };
 
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 80) {
+      dispatch(setScrollNav(true));
+    } else {
+      dispatch(setScrollNav(false));
+    }
+  });
+
+  console.log(onScrollNav);
+
   return (
-    <nav id='navbar' className={classes.navbar}>
+    <nav
+      id='navbar'
+      className={
+        !onScrollNav
+          ? classes.navbar
+          : `${classes.navbar} ${classes.scroll_nav}`
+      }>
       {isModalOpen && <CartModal />}
       <Card className={classes.navbar_card}>
         <div className={classes.burger_menu} onClick={toggleMenuHandler}>
@@ -74,11 +93,20 @@ function Navbar() {
         </div>
         <Link
           to='/'
-          className={classes.logo}
+          className={
+            !onScrollNav
+              ? classes.logo
+              : `${classes.logo} ${classes.on_scroll_logo}`
+          }
           onClick={() => dispatch(setActiveMenuLink(""))}>
           Shopper
         </Link>
-        <div className={classes.navbar_and_cart_wrapper}>
+        <div
+          className={
+            !onScrollNav
+              ? classes.navbar_and_cart_wrapper
+              : `${classes.navbar_and_cart_wrapper} ${classes.navbar_and_cart_wrapper_scroll}`
+          }>
           <ul
             className={
               !activeMenu
@@ -92,22 +120,14 @@ function Navbar() {
             <Link
               to={"/list/phones"}
               onClick={addItemsListHandler}
-              className={
-                activeMenuLink.payload === "Phones"
-                  ? classes.active
-                  : classes.dropdown_menu_link
-              }>
+              className={activeMenuLink.payload === "Phones" && classes.active}>
               <PhoneIphoneRoundedIcon className={classes.nav_drop_menu_icon} />
               Phones
             </Link>
             <Link
               to={"/list/tv"}
               onClick={addItemsListHandler}
-              className={
-                activeMenuLink.payload === "TV"
-                  ? classes.active
-                  : classes.dropdown_menu_link
-              }>
+              className={activeMenuLink.payload === "TV" && classes.active}>
               <TvIcon className={classes.nav_drop_menu_icon} />
               TV
             </Link>
@@ -115,9 +135,7 @@ function Navbar() {
               to={"/list/laptops"}
               onClick={addItemsListHandler}
               className={
-                activeMenuLink.payload === "Laptops"
-                  ? classes.active
-                  : classes.dropdown_menu_link
+                activeMenuLink.payload === "Laptops" && classes.active
               }>
               <LaptopChromebookRoundedIcon
                 className={classes.nav_drop_menu_icon}
@@ -128,9 +146,7 @@ function Navbar() {
               to={"/list/headphones"}
               onClick={addItemsListHandler}
               className={
-                activeMenuLink.payload === "Headphones"
-                  ? classes.active
-                  : classes.dropdown_menu_link
+                activeMenuLink.payload === "Headphones" && classes.active
               }>
               <HeadphonesIcon className={classes.nav_drop_menu_icon} />
               Headphones
@@ -139,9 +155,7 @@ function Navbar() {
               to={"/list/cameras"}
               onClick={addItemsListHandler}
               className={
-                activeMenuLink.payload === "Cameras"
-                  ? classes.active
-                  : classes.dropdown_menu_link
+                activeMenuLink.payload === "Cameras" && classes.active
               }>
               <CameraAltIcon className={classes.nav_drop_menu_icon} />
               Cameras
