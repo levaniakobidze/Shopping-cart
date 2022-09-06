@@ -10,7 +10,6 @@ import LaptopChromebookRoundedIcon from "@mui/icons-material/LaptopChromebookRou
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import TvIcon from "@mui/icons-material/Tv";
-import SlideUp from "../SlideUp/SlideUp";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -77,8 +76,6 @@ function Navbar() {
     }
   });
 
-  console.log(onScrollNav);
-
   return (
     <nav
       id='navbar'
@@ -89,9 +86,14 @@ function Navbar() {
       }>
       {isModalOpen && <CartModal />}
       <Card className={classes.navbar_card}>
-        <SlideUp />
         <div className={classes.burger_menu} onClick={toggleMenuHandler}>
-          <MenuIcon className={classes.burger_menu_icon} />
+          <MenuIcon
+            className={
+              !onScrollNav
+                ? classes.burger_menu_icon
+                : classes.burger_menu_icon_scroll
+            }
+          />
         </div>
         <Link
           to='/'
@@ -164,8 +166,15 @@ function Navbar() {
             </Link>
           </ul>
           <div className={classes.cart} onClick={openCartModalHandler}>
-            <ShoppingCartOutlinedIcon className={classes.cart_logo} />
-            <span className={classes.amount}>{amount}</span>
+            <ShoppingCartOutlinedIcon
+              className={
+                !onScrollNav ? classes.cart_logo : classes.cart_logo_scroll
+              }
+            />
+            <span
+              className={!onScrollNav ? classes.amount : classes.amount_scroll}>
+              {amount}
+            </span>
           </div>
         </div>
       </Card>

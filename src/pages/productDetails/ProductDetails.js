@@ -16,8 +16,6 @@ function ProductDetails() {
   const [modalIndex, setModalIndex] = useState(index);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const items = useSelector((state) => state.cart.listItems);
-  const timeout = useSelector((state) => state.modal.timeout);
-  let navigate = useNavigate();
 
   const params = useParams();
   const dispatch = useDispatch();
@@ -150,6 +148,9 @@ function ProductDetails() {
       {isModalOpen && (
         <div className={classes.modal_backdrop} onClick={closeModal}>
           <div className={classes.modal_wrapper} onClick={handleClick}>
+            <div className={classes.close_modal} onClick={closeModal}>
+              x
+            </div>
             <div className={classes.product_modal_imgs}>
               <div className={classes.main_modal_img}>
                 {product.length > 0 && (

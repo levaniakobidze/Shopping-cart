@@ -24,20 +24,22 @@
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  background-color: var(--main-grey);
 }
 .top_offers_header {
-  background-color: var(--main-white);
-  width: 200px;
+  background-color: var(--main-purple);
+  width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px 0;
-  font-size: 20px;
-  margin: 20px 20px;
-  border-radius: 10px;
+  font-size: 17px;
+  margin: 20px 0px;
+  /* border-radius: 10px; */
+  color: var(--main-white);
 }
 .top_offers_list_cont {
-  padding: 0 20px;
+  padding: 0 0px;
 }
 
 /* ////// ANIMATIONS  /////// */

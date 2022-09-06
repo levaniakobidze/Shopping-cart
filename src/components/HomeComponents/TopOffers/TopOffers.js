@@ -11,7 +11,7 @@ function TopOffers() {
   const navNextRef = useRef(null);
   return (
     <Swiper
-      spaceBetween={10}
+      spaceBetween={1}
       slidesPerView={2}
       breakpoints={{
         600: {
@@ -30,6 +30,7 @@ function TopOffers() {
           slidesPerView: 5,
         },
         1300: {
+          spaceBetween: 1,
           slidesPerView: 6,
         },
       }}

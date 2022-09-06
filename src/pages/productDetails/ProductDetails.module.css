@@ -3,7 +3,6 @@
   background-color: var(--main-grey);
   min-height: 100vh;
   margin-bottom: 20px;
-
 }
 
 .details_card {
@@ -59,6 +58,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .modal_wrapper {
   width: 700px;
   margin: 30px;
@@ -66,6 +66,21 @@
   background-color: var(--main-white);
   z-index: 10000000000000000000000000000000000000;
   border-radius: 5px;
+  position: relative;
+}
+.close_modal {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--main-purple);
+  color: var(--main-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4%;
+  top: -2%;
+  cursor: pointer;
 }
 
 .main_modal_img {
@@ -73,6 +88,7 @@
   height: 390px;
   margin: 0 auto;
   padding: 20px;
+  z-index: 10000000000000000000000000000000000000;
 }
 .main_modal_img img {
   object-fit: cover;
@@ -221,7 +237,6 @@
   .details {
     justify-content: center;
   }
-
 }
 
 @media screen and (max-width: 1259px) {

@@ -10,8 +10,8 @@
 }
 .empty {
   letter-spacing: 2px;
-  font-size: 27px;
-  color: rgb(61, 61, 61);
+  font-size: 20px;
+  color: rgb(167, 167, 167);
   width: 100%;
   height: 60vh;
   display: flex;

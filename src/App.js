@@ -14,6 +14,7 @@ import { ToastContainer } from "react-toastify";
 import Cookies from "./components/Cookies/Cookies";
 import Footer from "./components/footer/Footer";
 import { useLocation } from "react-router-dom";
+import SlideUp from "../src/components/SlideUp/SlideUp";
 
 function App() {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ function App() {
     <div className='App'>
       <ToastContainer />
       <Navbar />
-
+      <SlideUp />
       {showCookies && <Cookies setShowCookies={setShowCookies} />}
       <Routes>
         <Route path={"/"} element={<Home />} />
