@@ -9,7 +9,7 @@ let toastObj = {
   pauseOnHover: true,
   draggable: true,
   progress: undefined,
-  // theme: "dark", 
+  // theme: "dark",
 };
 const initialState = {
   initialItems: [],
@@ -36,10 +36,16 @@ const cartSlice = createSlice({
       const itemIsInCart = state.cartItems.find((item) => item.id === payload);
 
       if (itemIsInCart) {
-        toast.error("Item is in cart already", toastObj);
+        toast.error("Item is in cart already", {
+          ...toastObj,
+          className: "error",
+        });
         return;
       } else {
-        toast.success("Item added sucessfully", toastObj);
+        toast.success("Item added sucessfully", {
+          ...toastObj,
+          className: "succsess",
+        });
       }
 
       state.cartItems = [...state.cartItems, singleItem];
@@ -49,13 +55,13 @@ const cartSlice = createSlice({
     clearCart: (state) => {
       state.cartItems = [];
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-      toast.error("Cart is clear", toastObj);
+      toast.error("Cart is clear", { ...toastObj, className: "error" });
     },
     removeItemFromCart: (state, { payload }) => {
       const filtered = state.cartItems.filter((item) => item.id !== payload);
       state.cartItems = filtered;
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
-      toast.error("Item has been removed", toastObj);
+      toast.error("Item has been removed", { ...toastObj, className: "error" });
     },
     increaseAmount: (state, { payload }) => {
       const item = state.cartItems.find((item) => item.id === payload);

@@ -6,7 +6,6 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation } from "swiper";
-import { images } from "../HomeSwiper/homeImgs";
 SwiperCore.use([Autoplay, Navigation]);
 
 function Product({ id, amount, img, listImg, title, price }) {

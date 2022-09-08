@@ -1,0 +1,10 @@
+.error {
+  background-color: red !important;
+  color: var(--main-white) !important;
+  letter-spacing: 2px !important;
+}
+.succsess {
+  background-color: var(--main-purple) !important;
+  color: var(--main-white) !important;
+  letter-spacing: 2px !important;
+}
