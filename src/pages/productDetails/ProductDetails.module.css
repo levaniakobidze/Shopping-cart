@@ -49,7 +49,6 @@
 }
 .modal_backdrop {
   position: fixed;
-  z-index: 44444444444444444444444444444444444448;
   top: 0;
   width: 100%;
   height: 100vh;
