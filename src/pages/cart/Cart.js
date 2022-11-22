@@ -29,7 +29,7 @@ function Cart() {
             )}
             {cartItems &&
               cartItems.map((item, index) => {
-                return <CartItem key={item.id} {...item} />;
+                return <CartItem key={index} {...item} />;
               })}
           </div>
           {cartItems.length > 1 && (

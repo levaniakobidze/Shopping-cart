@@ -15,10 +15,11 @@ function CartItem({ img, id, title, price, amount }) {
   };
 
   const decrease = (id) => {
-    dispatch(decreaseAmount(id));  
+    dispatch(decreaseAmount(id));
   };
   const increase = (id) => {
     dispatch(increaseAmount(id));
+    console.log(amount);
   };
 
   return (

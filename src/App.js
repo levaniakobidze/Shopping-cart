@@ -28,6 +28,7 @@ function App() {
 
   useEffect(() => {
     dispatch(calculate());
+    console.log("calculated");
   }, [cartItems]);
 
   useEffect(() => {
