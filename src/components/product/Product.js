@@ -24,7 +24,8 @@ function Product({ id, amount, img, listImg, title, price }) {
         filterActive
           ? classes.product_wrapper
           : `${classes.product_wrapper} ${classes.active}`
-      }>
+      }
+    >
       <div className={classes.img_btns}>
         <button ref={navPrevRef} className={classes.prev}>
           {"<"}
@@ -46,15 +47,16 @@ function Product({ id, amount, img, listImg, title, price }) {
               clickable: true,
               prevEl: navPrevRef.current,
               nextEl: navNextRef.current,
-            }}>
+            }}
+          >
             <SwiperSlide>
-              <img src={listImg[0]} alt='' />
+              <img src={listImg[0]} alt="" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={listImg[1]} alt='' />
+              <img src={listImg[1]} alt="" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={listImg[2]} alt='' />
+              <img src={listImg[2]} alt="" />
             </SwiperSlide>
           </Swiper>
         </div>

@@ -1,12 +1,10 @@
 import React, { useRef } from "react";
-import classes from "./TopOffers.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
-import { laptopsList } from "../../../cartItems";
 import Product from "../../product/Product";
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
-function TopOffers() {
+function TopOffers({ list }) {
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
   return (
@@ -35,34 +33,26 @@ function TopOffers() {
         },
       }}
       loop={true}
-      modules={[Autoplay, Navigation, Pagination]}
-      stopClicksPropagation={false}
-      stopClicks={false}
+      // modules={[Autoplay, Navigation, Pagination]}
+      // stopClicksPropagation={false}
       autoplay={{
         delay: 2000,
-        disableOnInteraction: false,
+        disableOnInteraction: true,
       }}
       centeredSlides
       navigation={{
         clickable: true,
         prevEl: navPrevRef.current,
         nextEl: navNextRef.current,
-      }}>
-      {laptopsList.map((item) => {
+      }}
+    >
+      {list.map((item) => {
         return (
           <SwiperSlide>
             <Product key={item.id} {...item} />
           </SwiperSlide>
         );
       })}
-      <div className={classes.img_btns}>
-        <button ref={navPrevRef} className={classes.prev}>
-          {"<"}
-        </button>
-        <button ref={navNextRef} className={classes.next}>
-          {">"}
-        </button>
-      </div>
     </Swiper>
   );
 }

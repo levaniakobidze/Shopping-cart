@@ -78,12 +78,13 @@ function Navbar() {
 
   return (
     <nav
-      id='navbar'
+      id="navbar"
       className={
         !onScrollNav
           ? classes.navbar
           : `${classes.navbar} ${classes.scroll_nav}`
-      }>
+      }
+    >
       {isModalOpen && <CartModal />}
       <Card className={classes.navbar_card}>
         <div className={classes.burger_menu} onClick={toggleMenuHandler}>
@@ -96,51 +97,55 @@ function Navbar() {
           />
         </div>
         <Link
-          to='/'
+          to="/"
           className={
             !onScrollNav
               ? classes.logo
               : `${classes.logo} ${classes.on_scroll_logo}`
           }
-          onClick={() => dispatch(setActiveMenuLink(""))}>
-          Shopper
+          onClick={() => dispatch(setActiveMenuLink(""))}
+        >
+          SHOPPIT
         </Link>
         <div
           className={
             !onScrollNav
               ? classes.navbar_and_cart_wrapper
               : `${classes.navbar_and_cart_wrapper} ${classes.navbar_and_cart_wrapper_scroll}`
-          }>
+          }
+        >
           <ul
             className={
               !activeMenu
                 ? classes.navbar_menu
                 : `${classes.navbar_menu} ${classes.navbar_menu_active}`
             }
-            onClick={closeMenuHandler}>
+            onClick={closeMenuHandler}
+          >
             <div className={classes.close_icon_cont}>
               <CloseSharpIcon className={classes.close_menu_icon} />
             </div>
             <Link
               to={"/list/phones"}
               onClick={addItemsListHandler}
-              className={activeMenuLink.payload === "Phones" && classes.active}>
+              className={activeMenuLink.payload === "Phones" && classes.active}
+            >
               <PhoneIphoneRoundedIcon className={classes.nav_drop_menu_icon} />
               Phones
             </Link>
             <Link
               to={"/list/tv"}
               onClick={addItemsListHandler}
-              className={activeMenuLink.payload === "TV" && classes.active}>
+              className={activeMenuLink.payload === "TV" && classes.active}
+            >
               <TvIcon className={classes.nav_drop_menu_icon} />
               TV
             </Link>
             <Link
               to={"/list/laptops"}
               onClick={addItemsListHandler}
-              className={
-                activeMenuLink.payload === "Laptops" && classes.active
-              }>
+              className={activeMenuLink.payload === "Laptops" && classes.active}
+            >
               <LaptopChromebookRoundedIcon
                 className={classes.nav_drop_menu_icon}
               />
@@ -151,16 +156,16 @@ function Navbar() {
               onClick={addItemsListHandler}
               className={
                 activeMenuLink.payload === "Headphones" && classes.active
-              }>
+              }
+            >
               <HeadphonesIcon className={classes.nav_drop_menu_icon} />
               Headphones
             </Link>
             <Link
               to={"/list/cameras"}
               onClick={addItemsListHandler}
-              className={
-                activeMenuLink.payload === "Cameras" && classes.active
-              }>
+              className={activeMenuLink.payload === "Cameras" && classes.active}
+            >
               <CameraAltIcon className={classes.nav_drop_menu_icon} />
               Cameras
             </Link>
@@ -172,7 +177,8 @@ function Navbar() {
               }
             />
             <span
-              className={!onScrollNav ? classes.amount : classes.amount_scroll}>
+              className={!onScrollNav ? classes.amount : classes.amount_scroll}
+            >
               {amount}
             </span>
           </div>

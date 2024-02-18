@@ -3,6 +3,11 @@
   min-height: 100vh;
   background-color: var(--main-white);
 }
+.top_cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .home_main_img {
   width: 100%;
@@ -20,14 +25,15 @@
   width: 100%;
   padding: 40px 0;
   border-radius: 10px;
-  background-color: var(--main-purple);
   display: flex;
   flex-direction: column;
   margin: 20px 0;
-  background-color: var(--main-grey);
+  /* background-color: var(--main-grey); */
 }
 .top_offers_header {
-  background-color: var(--main-purple);
+  /* background-color: var(--main-purple); */
+  background: rgba(0, 0, 0, 0.4);
+
   width: 150px;
   display: flex;
   justify-content: center;
@@ -39,7 +45,23 @@
   color: var(--main-white);
 }
 .top_offers_list_cont {
-  padding: 0 0px;
+  padding: 10px 0px;
+  /* background-color: var(--main-purple); */
+  /* border-radius: 20px; */
+}
+.swiper-container {
+  padding: 10px 10px !important;
+}
+.banner_img {
+  width: 100%;
+}
+
+.banner_img img {
+  width: 100%;
+  object-fit: fill;
+}
+.bn {
+  margin-bottom: 50px;
 }
 
 /* ////// ANIMATIONS  /////// */

@@ -8,3 +8,7 @@
   color: var(--main-white) !important;
   letter-spacing: 2px !important;
 }
+
+.swiper-container {
+  padding: 10px 0px !important;
+}
