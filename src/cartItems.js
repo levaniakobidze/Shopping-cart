@@ -269,7 +269,7 @@ export const tvList = [
     title: "XiaomiQ1 75 LA4514GL Global",
     brand: "xiaomi",
     price: "1699.99",
-    img: "/assets/c1",
+    img: "/assets/c1.webp",
     listImg: ["/assets/c1.webp", "/assets/c2.webp"],
     spec: {
       rate: "144 Hz",

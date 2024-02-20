@@ -15,6 +15,12 @@ import Cookies from "./components/Cookies/Cookies";
 import Footer from "./components/footer/Footer";
 import { useLocation } from "react-router-dom";
 import SlideUp from "../src/components/SlideUp/SlideUp";
+import ProgressBar from "@badrap/bar-of-progress";
+
+const progress = new ProgressBar({
+  size: 3,
+  color: "white",
+});
 
 function App() {
   const dispatch = useDispatch();
@@ -28,7 +34,6 @@ function App() {
 
   useEffect(() => {
     dispatch(calculate());
-    console.log("calculated");
   }, [cartItems]);
 
   useEffect(() => {
@@ -36,8 +41,15 @@ function App() {
     setShowCookies(true);
   }, []);
 
+  useEffect(() => {
+    progress.start();
+    setTimeout(() => {
+      progress.finish();
+    }, 800);
+  }, [window.location.pathname]); //
+
   return (
-    <div className='App'>
+    <div className="App">
       <ToastContainer />
       <Navbar />
       <SlideUp />

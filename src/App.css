@@ -12,3 +12,11 @@
 .swiper-container {
   padding: 10px 0px !important;
 }
+#progress-bar {
+  background-color: red;
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

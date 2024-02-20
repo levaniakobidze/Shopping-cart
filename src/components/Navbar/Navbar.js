@@ -65,7 +65,7 @@ function Navbar() {
   };
   const closeMenuHandler = () => {
     dispatch(closeMenu());
-    dispatch(closeFilter());
+    // dispatch(closeFilter());
   };
 
   window.addEventListener("scroll", () => {

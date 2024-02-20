@@ -3,7 +3,7 @@
   position: sticky;
   top: 0;
   right: 0;
-  background-color: var(--main-white);
+  background-color: var(--main-purple);
 
   z-index: 1000;
   height: 70px;
@@ -12,10 +12,16 @@
 
 .scroll_nav {
   /* background: rgba(195, 0, 255, 0.9) !important; */
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
   background-color: transparent;
+  /* box-shadow: 0px 0px 10px 1px rgb(181, 181, 181); */
+  background-color: rgba(195, 0, 255, 0.688);
+  max-width: 81rem !important;
+  margin: 0 auto;
+  top: 10px;
   height: 50px;
-  box-shadow: 0px 0px 10px 1px rgb(181, 181, 181);
+  border-radius: 10px;
+  padding: 0 20px;
 }
 
 .navbar_card {
@@ -48,7 +54,8 @@
 .logo {
   padding: 10px 10px;
   margin-right: 1px;
-  color: var(--main-purple);
+  /* color: var(--main-purple); */
+  color: white;
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -83,11 +90,11 @@
 }
 
 .cart_logo {
-  color: rgb(73, 73, 73);
+  color: rgb(255, 255, 255);
   font-size: 25px !important;
 }
 .cart_logo_scroll {
-  color: var(--main-purple) !important;
+  color: var(--main-white) !important;
   font-size: 25px !important;
 }
 
@@ -128,19 +135,19 @@
   text-decoration: none;
   height: 100% !important;
   padding: 30px 10px;
-  color: rgb(118, 118, 118);
+  /* color: rgb(118, 118, 118); */
+  color: rgb(230, 230, 230);
   letter-spacing: 1px;
   font-weight: bold;
   display: flex;
   align-items: center;
   font-size: 14px !important;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgb(237, 237, 237);
   transition: all 0.3s;
   padding: 0 10px;
 }
 .active {
   text-decoration: none;
-  color: rgb(118, 118, 118);
   letter-spacing: 1px;
   font-weight: bold;
   display: flex;
@@ -149,12 +156,12 @@
   height: 100%;
   transition: all 0.3s;
   /* /////// */
-  border-bottom: 1px solid var(--main-purple) !important;
-  color: var(--main-purple) !important;
+  border-bottom: 1px solid white !important;
+  color: rgb(255, 255, 255) !important;
 }
 .navbar_menu a:hover {
-  border-bottom: 1px solid var(--main-purple);
-  color: var(--main-purple);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 .home_icon {
   margin-right: 3px;
