@@ -135,6 +135,10 @@
   /* background-color: var(--main-purple); */
   color: var(--main-purple);
 }
+
+.purple_icon {
+  color: var(--main-purple);
+}
 @media screen and (max-width: 940px) {
   .product_wrapper {
     width: 176px;

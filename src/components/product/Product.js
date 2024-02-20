@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import classes from "./Product.module.css";
 import { addItemToCart } from "../../redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,6 +10,9 @@ SwiperCore.use([Autoplay, Navigation]);
 
 function Product({ id, amount, img, listImg, title, price }) {
   const filterActive = useSelector((state) => state.cart.filterActive);
+  const cartItems = useSelector((state) => state.cart.cartItems);
+
+  const isAlreadyInCart = cartItems.find((item) => item.id === id);
 
   const dispatch = useDispatch();
   const addToCartHandler = (id) => {
@@ -17,6 +20,10 @@ function Product({ id, amount, img, listImg, title, price }) {
   };
   const navPrevRef = useRef(null);
   const navNextRef = useRef(null);
+
+  useEffect(() => {
+    console.log(cartItems, "n");
+  }, [cartItems]);
 
   return (
     <div
@@ -66,7 +73,11 @@ function Product({ id, amount, img, listImg, title, price }) {
         </div>
       </Link>
       <button className={classes.add_btn} onClick={() => addToCartHandler(id)}>
-        <ShoppingCartOutlinedIcon />
+        {isAlreadyInCart ? (
+          <ShoppingCartOutlinedIcon className={classes.purple_icon} />
+        ) : (
+          <ShoppingCartOutlinedIcon className={classes.white_icon} />
+        )}
       </button>
     </div>
   );
