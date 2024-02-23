@@ -26,13 +26,13 @@ function ProductsList() {
         <Filter />
         <div className={classes.list_wrapper}>
           <div className={!filterActive ? classes.banner : classes.banner_hide}>
-            <img src={images[1]} alt='' className={classes.img1} />
+            <img src={images[1]} alt="" className={classes.img1} />
             <img
               src={images[0]}
-              alt=''
+              alt=""
               className={!filterActive ? classes.img2 : classes.none}
             />
-            <img src={images[1]} alt='' className={classes.img2} />
+            <img src={images[1]} alt="" className={classes.img2} />
           </div>
           {items &&
             items.map((item) => {

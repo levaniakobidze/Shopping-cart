@@ -15,11 +15,11 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   phonesList,
   tvList,
-  laptopsList,
   headphonesList,
   camerasList,
+  laptopsList,
 } from "../../cartItems";
-import { addItemsList, closeFilter } from "../../redux/slices/cartSlice";
+import { addItemsList } from "../../redux/slices/cartSlice";
 import { openModalPermanently } from "../../redux/slices/cartModalSlice";
 import {
   closeMenu,
