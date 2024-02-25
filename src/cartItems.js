@@ -243,27 +243,6 @@ export const phonesList = [
 ];
 
 export const tvList = [
-  // {
-  //   id: "d8oqw24asde234234qwexfwfwf22s3OPdcT2",
-  //   title: "Xiaomi MI TV Q1 75 LA4514GL Global",
-  //   brand: "xiaomi",
-  //   price: "1699.99",
-  //   img: "/assets/0169699_lg-tv-55up78003lb_550.webp",
-  //   listImg: [
-  //     "/assets/0169699_lg-tv-55up78003lb_550.webp",
-  //     "/assets/1b.webp",
-  //     "/assets/b3.webp",
-  //     "/assets/b4.webp",
-  //     "/assets/b5.webp",
-  //   ],
-  //   spec: {
-  //     rate: "144 Hz",
-  //     type: "intel Core i5",
-  //     dpType: "IPS",
-  //     ssd: "pCle nVme",
-  //   },
-  //   amount: 1,
-  // },
   {
     id: "d8oqw24asdeasd234234qwexfsdfsdfsdfsewrvergerewfwf22s3OPdcT2",
     title: "XiaomiQ1 75 LA4514GL Globals",
@@ -294,21 +273,7 @@ export const tvList = [
     },
     amount: 1,
   },
-  // {
-  //   id: "dasfaasasdad234234qwexfwfwf22s3OPdcT2",
-  //   title: "Samsung TV UE50CU8072UXXH-2023",
-  //   brand: "samsung",
-  //   price: "3699.99",
-  //   img: "/assets/F1",
-  //   listImg: ["/assets/F1.webp", "/assets/f2.webp", "/assets/f3.webp"],
-  //   spec: {
-  //     rate: "144 Hz",
-  //     type: "intel Core i5",
-  //     dpType: "IPS",
-  //     ssd: "pCle nVme",
-  //   },
-  //   amount: 1,
-  // },
+
   {
     id: "dasfaasasdad234234qwexfwfwf22s3OPdcT2",
     title: "Samsung TV UE50CU8072UXXH-2023",
@@ -329,21 +294,6 @@ export const tvList = [
     },
     amount: 1,
   },
-  // {
-  //   id: "dasfaasasdad234wrw5323asd4qwexfwfwf22s3OPdcT2",
-  //   title: "Samsung TV UE50CU8072UXXH-2023",
-  //   brand: "samsung",
-  //   price: "3699.99",
-  //   img: "/assets/F1",
-  //   listImg: ["/assets/F1.webp", "/assets/f2.webp", "/assets/f3.webp"],
-  //   spec: {
-  //     rate: "144 Hz",
-  //     type: "intel Core i5",
-  //     dpType: "IPS",
-  //     ssd: "pCle nVme",
-  //   },
-  //   amount: 1,
-  // },
   {
     id: "d8oqw24asde234asd53234qwexfwfwf22s3OPdcT2",
     title: "Xiaomi MI TV Q1 75 LA4514GL Global",
