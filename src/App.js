@@ -1,6 +1,6 @@
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 import ProductsList from "./pages/productsList/ProductsList";
 import Cart from "./pages/cart/Cart";
 import Navbar from "./components/Navbar/Navbar";
